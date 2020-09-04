@@ -1,0 +1,232 @@
+   #nav{
+     background-color:  #000000;
+   }
+
+
+    /*Aqui é feita a configurações da caixa de Pesquisa do Top do Site*/
+    #caixa-top input{
+    width: 50%;
+    height: 30px;  /*Ajuste no tamanho da caixa de busca*/  
+    padding-left: 2px;
+    border: medium 3px; /* Borda da caixa de pesquisa*/
+    border-style: groove;
+    margin-left: 350px;
+    margin-right: 100px;
+    background-color: white;
+    
+   
+}
+/* FORMATAÇÃO DO BLOCO LIVROS */    
+#livros{
+  display: inline-block;
+  display:flex;
+  margin-left: 0px ; /*formatação da margem*/
+ 	padding: 20px;
+	flex-direction:row; /*DIRECIONAMENTO EM LINHA */
+	flex-wrap:nowrap; /*NÃO TEM QUEBRA DE LINHA*/
+  justify-content: center ; /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
+  text-align: center;
+}
+
+
+
+/*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
+#livros img{
+		
+ max-width:63%;
+ background-color: white;
+  
+}
+/* FORMATAÇÃO DO PARAGRAFO DOS LIVROS PAGINA PRINCIPAL*/
+.botao-comprar p{
+  font-size: 10;
+  height: 3px 1px;
+  
+}
+/*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
+.botao-comprar button{
+  border-color: #00FFFF;
+  background-color: white;
+  width: 200px;
+}
+  /*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
+    #logo-top  h1{
+
+      font-size: 20px;
+      position: relative;/*Posição do Icone*/
+      top: 25px;
+      left: 50px; /*alinhamento da margem direita*/
+       
+    }
+
+    /* LEMBRETE USAR "." para Formatar uma class do Html*/
+    .carrinho h5{
+      display: inline-block ;
+      width:95%;
+      text-decoration:none;
+      text-transform:  uppercase;
+      text-align:right;
+      background-color: white;
+      width: 100%;
+      font-size: 15px;
+    
+      
+   
+     
+    }
+    .carrinho h5{
+      padding-top:0px;
+      
+    }
+    /*FORMTAÇÃO DAS CONFIGURAÇÃO DO FOOTER É AQUI8*/
+   footer {
+    position: relative;
+    width: 100%;
+     /*Ajuste da altura do Footer*/
+    padding: 20px; /*Ajuste da formatação do topo*/
+    color: white;
+    background-color: #1C1C1C
+     }
+
+   footer ul {
+    
+    display: inline;
+    
+  
+    
+     font-family: 'Arial Narrow Bold', sans-serif;
+     
+   }
+
+   footer li{
+     display: inline;
+     padding:-1px;
+     margin-right: 60px;/*Espaço entre as letras do footer*/
+     margin-left: 0px;/*informações da margem*/
+     font-stretch: semi-condensed;
+    
+   }
+
+   /*formtação e espaço dos icones do footer*/
+   .rodapeicone{
+    display: inline;
+    margin-left: 650px;
+   }
+
+   footer p{
+     text-align: center;
+     font-size: small;
+    
+   }
+
+   /*formatação da caixa de login*/ 
+   .cliente_login {
+
+  direction: initial;
+   border-radius: groove 2px;
+   border-color: #1C1C1C;
+   padding-top: 40px;
+   padding-left: 150px;
+   padding-bottom: 250px;
+  }
+
+  /*Configurações dos padrões do botão*/
+  .cliente_login button{
+
+    background-color: black;
+    color: blanchedalmond;
+    width: 250px;/*Configurando a largura do botão do login*/
+    height: 30px;
+
+   }
+
+   /*Configurando o tamanho da caixa de input*/
+   .cliente_login input{
+    width: 250px;
+  
+
+
+   }
+
+   .cliente_login h6{
+  font-size: 10px;
+  color:#008B8B;
+  padding-left: 45px;
+  height: 5px;
+  
+
+
+   }
+
+  .cadastro_cliente button{
+    
+    background-color: black;
+    color: blanchedalmond;
+    width: 250px;/*Configurando a largura do botão do login*/
+    height: 30px;
+
+
+  }
+
+   /*AQUI É O CORPO DE TODA CONFIGURAÇÃO RESPONSIVA DO SITE*/
+       @media  screen and (max-width: 600px) {
+    
+             #caixa-top input{
+              display: flex;      
+              width: auto;      
+     
+  }
+          h1{
+
+             width: auto;
+    }
+       #livros{
+      display: block;
+      display:flex;
+      margin-left: 0px ; /*formatação da margem*/
+      padding: 20px;
+      flex-direction:row; /*DIRECIONAMENTO EM LINHA */
+      flex-wrap:nowrap; /*NÃO TEM QUEBRA DE LINHA*/
+      justify-content: center ; /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
+      text-align: center;
+      font-size: small; /*FORMTAÇÃO DA*/
+    }
+    
+    
+    
+    /*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
+    #livros img{
+        
+     max-width:30%;
+     background-color: white;
+      
+    }
+    /*FORMATAÇÃO DO PARAGRAFO DOS LIVROS PAGINA PRINCIPAL*/
+    .botao-comprar p{
+      font-size: 5;
+      height: 3px ;
+      
+    }
+    /*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
+    .botao-comprar button{
+      border-color: #00FFFF;
+      background-color: white;
+      width: 100px;
+    }
+      /*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
+        #logo-top  h1{
+          display: flex;
+          font-size: 15px;
+          position: relative;/*Posição do Icone*/
+          top: 15px;
+          left: 25px; /*alinhamento da margem direita*/
+           
+        }
+    
+          
+
+
+
+
+
+   }
