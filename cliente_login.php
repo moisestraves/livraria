@@ -1,11 +1,13 @@
 <?php
 require 'header.php';
+require 'adm/conexao.php';
+require 'adm/func_sistema.php';
 ?>
 
 
 <div class="cliente_login">
     <p> Já sou cliente </p>
-<form action="" method="post" id="form-login" name="form-login">
+<form method="POST"  action="processa_cliente.php">
    
         <p>
             
@@ -24,7 +26,16 @@ require 'header.php';
 </div>
 
 
+
+
 <?php 
+
+
+
+//$usuario =$_POST['email'];
+//$senha =$_POST['senha'];
+//print_r($usuario);
+//print_r($senha);
 
 require 'footer.php';
 ?>
