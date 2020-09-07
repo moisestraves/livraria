@@ -2,10 +2,7 @@
      background-color:  #000000;
    }
 
-   a{
-     text-decoration: none;
-     display: none;
-   }
+ 
 
     /*Aqui é feita a configurações da caixa de Pesquisa do Top do Site*/
     #caixa-top input{

@@ -11,7 +11,7 @@ require 'adm/func_sistema.php';
    
         <p>
             
-            <input required type="email" id="email" name="email"  placeholder="E-mail" >
+            <input required type="email" id="email" name="login"  placeholder="E-mail" >
         </p>
         <p>
            
@@ -30,12 +30,6 @@ require 'adm/func_sistema.php';
 
 <?php 
 
-
-
-//$usuario =$_POST['email'];
-//$senha =$_POST['senha'];
-//print_r($usuario);
-//print_r($senha);
 
 require 'footer.php';
 ?>
