@@ -37,15 +37,15 @@
           <ul class="nav justify-content-center">
           
             <li class="nav-item">
-             <a class="nav-link text-white  active" href="#">CADASTRO</a>
+             <a class="nav-link text-white  active" href="cadastro_cliente.php">CADASTRO</a>
          </li>
        
          <li class="nav-item">
-          <a class="nav-link text-white " href="#">PEDIDOS</a>
+          <a class="nav-link text-white " href="pedidos.php">PEDIDOS</a>
         </li>
        
         <li class="nav-item">
-          <a class="nav-link text-white " href="#">ENDERÇO ENTREGA</a>
+          <a class="nav-link text-white " href="endereco_entrega.php">ENDEREÇO ENTREGA</a>
         </li>
        
         <li class="nav-item">
@@ -53,7 +53,7 @@
         </li>
         
         <li class="nav-item">
-            <a class="nav-link text-white " href="#">COMPRAS</a>
+            <a class="nav-link text-white " href="historico_compras.php">COMPRAS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white " href="sair.php">SAIR</a>

@@ -2,7 +2,7 @@
      background-color:  #000000;
    }
 
- 
+  
 
     /*Aqui é feita a configurações da caixa de Pesquisa do Top do Site*/
     #caixa-top input{
@@ -120,6 +120,19 @@
     
    }
 
+   #cliente {
+     display: block;
+     border-radius: groove 2px;
+     border-color: #1C1C1C;
+     padding-top: 0px;
+     padding-left: 0px;
+     padding-bottom: 0px;
+     background-color: white;
+     border: solid 2px;
+    
+   }
+
+    
    /*formatação da caixa de login*/ 
    .cliente_login {
 

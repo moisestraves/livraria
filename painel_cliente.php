@@ -9,12 +9,17 @@ session_status();
 
 verificaAcesso();
 ?>
+
+<div id="cliente">
 <h1> Bem vindo  </h1>
 <p>olá <?php echo $_SESSION['Nome']; ?></p>
-<input type="text" placeholder="Nome do Cliente">
-<input type="text" placeholder="Endereço">
-<input type="text" placeholder="numero">
 
+    <ul>
+        <li>Cadastro</li>
+        <li>Pedido</li>
+        <li>Cadastro</li>
+        <li>Endereço</li>
+
+    </ul>
 </p>
-
-
+</div>
