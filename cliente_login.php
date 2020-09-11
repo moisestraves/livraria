@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'header.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
@@ -29,6 +30,7 @@ require 'adm/func_sistema.php';
 
 
 <?php 
+
 
 
 require 'footer.php';

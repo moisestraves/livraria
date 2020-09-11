@@ -1,37 +1,59 @@
 <?php
-
+ 
+session_start();
 require 'header.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
-session_start();
 
 
-/*TESTE DO RECEBIMENTO DE DADOS PARA VALIDAÇÃO E TESTE DO LOGIN DO USUÁRIO*/
+/*Aqui o sistema recebe os dados de login do cliente para acessar os sistema*/
   
 if(isset($_POST['login']) && (isset($_POST['senha']))){
 
-        $loginUsuario = $_POST['login'];
-        $senhaUsuario= $_POST['senha'];
-
-        //Acessando a função que verificar se o email do cliente "Login" já esta  cadastrado no sistema
-        $clienteCadastrado = loginCliente($conexao,$loginUsuario,$senhaUsuario);
-
-      
-
-      
-
-      
-
-}
+        $loginUsuario = mysqli_escape_string($conexao,$_POST['login']);
+        $senhaUsuario= mysqli_escape_string($conexao,$_POST['senha']);
 
 
         
+        $loginSql = "SELECT * FROM cliente WHERE Email =('$loginUsuario') AND ('$senhaUsuario')";
+        $queryLogin = mysqli_query($conexao,$loginSql);
+
+        //Criado o Array
+        $dadosusuario = array();
+
+            //Aqui estou percorrendo o array com as informações do usuário    
+            while ($usuario = mysqli_fetch_assoc($queryLogin)) {
+                $dadosusuario[] = $usuario;
+            }
+
+
+            //print_r($dadosusuario);
+
+        
+        $clienteCadastrado = mysqli_fetch_row($queryLogin);
+            
+        }
+        //Teste de Validação do Cadastro do cliente
+        if($clienteCadastrado = $dadosusuario){
+
+                $_SESSION['Email'] = $clienteCadastrado[0]['Email'];
+            
+                var_dump($_SESSION['Email']);
+
+           // print_r($clienteCadastrado);
+          
+               //header('location:painel_cliente.php');
+        }else{
+               
+
+            header('location:cliente_login.php?usaurionãocastrado');
+           
+        }
     
 
+    
 
-    //var_dump($clienteCadastrado);
-  
 
 
 ?>
