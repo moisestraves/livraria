@@ -36,14 +36,22 @@ if(isset($_POST['login']) && (isset($_POST['senha']))){
         }
         //Teste de Validação do Cadastro do cliente
         if($clienteCadastrado = $dadosusuario){
-
-                $_SESSION['Email'] = $clienteCadastrado[0]['Email'];
+                
+            //Aqui é criada a sessão com os dados do usuário
+               
+            $_SESSION['Email'] = $clienteCadastrado[0]['Email'];
             
-                var_dump($_SESSION['Email']);
+            $_SESSION['Cod_cliente']= $clienteCadastrado[0]['Cod_cliente'];
+            $_SESSION['Nome']= $clienteCadastrado[0]['Nome'];
+
+            
+                
+            
+               // var_dump($_SESSION['Cod_cliente']);
 
            // print_r($clienteCadastrado);
           
-               //header('location:painel_cliente.php');
+               header('location:painel_cliente.php');
         }else{
                
 

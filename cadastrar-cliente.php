@@ -16,30 +16,34 @@ require 'adm/func_sistema.php';
 <p>
 <input type="e-mail"  name="login" placeholder="email"></p>
 <p><input type="password" name="senha" placeholder="senha"></p>
-<button type="submit">Cadastrar</button>
-
-
-
+<button class="btn btn-primary"  name ="cadastrar"type="submit">Cadastrar</button>
 </form>
 </div>
 
 <?php 
 
+    // Dados para o Cadastro Inicial do Cliente
+
+    if(isset($_POST['cadastrar'])){
     $cliente = $_POST['login'];
     
     $senhaCliente = $_POST['senha'];
 
     $resultado=cadastroCliente($conexao,$cliente,$senhaCliente);
+    
+   
+    header('locaction:cliente_login.php');
 
-    if($resultado > 0){
 
-        echo 'Parabéns Cliente cadastrado';
-    }else{
-
-        echo 'Teste Novamente';
     }
 
-   
     
+
+?>
+<?php
+
+
+
+require 'footer.php';
 
 ?>

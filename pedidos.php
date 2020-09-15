@@ -11,44 +11,26 @@ require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
 
-$id = 1;
-// Aqui foi inserida a função que consulta os pedidos do cliente
-$pedidonovo=conPedido($conexao,$id);
 
-/*Aqui é feita a verificação do retorno do pedido do cliente
- se for > 0 ele vai listar os pedidos na Tabela*/ 
+$id_cliente =$_SESSION['Cod_cliente'];
 
- if($pedidonovo < 1){
+//$pedido =conPedido($conexao,$id_cliente);
 
-    //AQUI FALTA CONFIGURAR A LISTAGEM DO PEDIDO DO CLIENTE
-        echo '
-        <div class="imprimirTabela">
-        
-        <p>Resumo do Pedido</p>
-        <table>
-            <tr>
-            <th>Nome</th>
-            <th>Data Pedido</th>
-            <th>Qtd</th>
-            </tr>
-            <tr>
-            <td>Cliente Teste</td>
-            <td>09/09/2020</td>
-            <td>1</td>
-            </tr>
+//Aqui é Executada a Query de consulta do Usuário Logado no Sistema
+$procCliente = "SELECT* from cliente where  Email='$id_cliente'";
+$pedido =mysqli_query($conexao,$procCliente);
+
+$resultado= mysqli_fetch_assoc($pedido);
+print_r($resultado);
+
+if($resultado < 1){
+
+
+    echo "<br><h1> Relatório de Pedidos";
     
-            </table> 
-            
-            </div>
-            
-            ';
-                  
-              
-    }else {
-
+    echo "<h3> Não foi Localizamos pedido para você !";
     
-        echo '<h1>Não localizamos o Pedido para este Cliente';
-   
+    
 }
 
 ?>

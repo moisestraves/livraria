@@ -12,58 +12,46 @@ require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
 
-//Chamada da função que Consulta o Endereço de Entrega 
-    $codigoCliente =1;
+
+
    
-    $entrega = enderecoEntrega($conexao,$codigoCliente);
+   //Aqui estou Salvando o email do cliente na sessão para Selecionar os dados no banco
+$id_cliente =$_SESSION['Email'];
 
-  //print_r($entrega);
+//var_dump($id_cliente);
 
-//Array adicionado depois , para  grava os dados depois do Foreach
-     $ruaEntrega = array();
-        foreach ($entrega as $end){
+//Aqui é Executada a Query de consulta do Usuário Logado no Sistema
+$procCliente = "SELECT *from cliente where  Email='$id_cliente'";
+$queryCliente =mysqli_query($conexao,$procCliente);
 
-        $ruaEntrega []=$end;
-    }
-    
-        
-   // echo"Número :";
-    
-   //echo($ruaEntrega[0]['email']);
+$resultado= mysqli_fetch_assoc($queryCliente);
 
-   // $_SESSION['email']=$ruaEntrega[0]['email'];
-   // var_dump($_SESSION);
-   
-   //Aqui estou capiturando o login da sessão criada
-   //$cliente_Id=[$_SESSION];
-
-  
+//print_r($resultado);
 ?>
 
 
-<div class="imprimirTabela">
-<p>Endereço de Entrega </p>
-<table>
-    <tr>
-    <th>Endereço</th>
-    <th>Número</th>
-    <th>Complemento</th>
-    <th>Bairro</th>
-    <th>CEP</th>
-    </tr>
+<div class="cliente_login">
+<P>
+<h2>Endereço de Entrega</h2>
+<input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
 
-      <tr>
-          <!-- Aqui esta listando o  endereço de Entrega do cliente-->
-        <td><?=$ruaEntrega[0]['endereco'];?></td>
-        <td><?=$ruaEntrega[0]['numero'];?></td>
-        <td><?=$ruaEntrega[0]['complemento'];?></td>
-        <td><?=$ruaEntrega[0]['bairro'];?></td>
-        <td><?=$ruaEntrega[0]['cep'];?></td>
-     <!--CONTINUAR AQUI PARA FINALIZAR  PAGINA DE CONSULTA E ALTERAR OS DADOS-->
-    </tr>
-    
-    
-</table>
+<input type="text" name="numero"  value="<?php echo $resultado['Numero'];?>"></label>
 
+<input  type="text" name="bairro"  value="<?php echo $resultado['Bairro'];?>"></p>
+
+<input type="text" name="complemento"  value="<?php echo $resultado['Complemento'];?>"></label>
+
+<input  type="text" name="cep"  value="<?php echo $resultado['Cep'];?>">
+
+<input type="text" name="estado"  value="<?php echo $resultado['Estado'];?>"></label></p>
+<button type="subimit" name="alterar">Alterar</button><button type="subimit">Voltar</button>
 
 </div>
+
+<?php
+
+
+
+require 'footer.php';
+
+?>

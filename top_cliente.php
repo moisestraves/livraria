@@ -37,7 +37,7 @@
           <ul class="nav justify-content-center">
           
             <li class="nav-item">
-             <a class="nav-link text-white  active" href="cadastro_cliente.php">CADASTRO</a>
+             <a class="nav-link text-white  active" href="consulta_cliente.php">CADASTRO</a>
          </li>
        
          <li class="nav-item">

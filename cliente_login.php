@@ -26,6 +26,12 @@ require 'adm/func_sistema.php';
 
 </div>
 
+<!-- Botão para castrado de novos clientes-->
+<div class="clientecadastrar">
+<p> Ainda não sou Cliente </p>
+
+<a href="cadastrar-cliente.php"><button  type ="subimit" name="cadastrar">Cadastrar</button></a>
+</div>
 
 
 

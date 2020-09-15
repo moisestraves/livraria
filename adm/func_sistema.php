@@ -3,16 +3,28 @@
 
 require 'adm/conexao.php';
 
+//Função Cadastro do  novo cliente
 function cadastroCliente($conexao,$login,$senha){
-    $senhaCad = md5($senha);
-    $sqlCadCliente ="INSERT INTO cliente Cod_cliente,Nome,Email,Senha,Tel,Endereco,Bairro,Numero,Complemento,Cep,Estado,Cidade,Tipo_Pessoa).
-     VALUES '','','$login', '$senhaCad','','', '', '','', '', '', '', ''";
+  //  $md = md5($senha);
+    $sqlCadCliente =' INSERT INTO cliente (Cod_cliente, Nome, Email, Senha, Tel, Endereco, Bairro, Numero, Complemento, Cep, Estado, Cidade, Tipo_Pessoa)';
+    $sqlCadCliente.= "VALUES ('NULL', '', '$login', '$senha', '', '', '', '0', '', '', '', '', '')";
+   
+     if(mysqli_query($conexao,$sqlCadCliente) ){
 
-        
-     return mysqli_query($conexao,$sqlCadCliente);
+        echo "Cadastro realizado com sucesso!";
+
+     }else {
+
+        echo " Erro:".$sqlCadCliente. "<br>" .mysqli_error($conexao);
+     }
+
+     
+    function cliente(){
+
+        echo "Bem vindo";
+    }
 
 
-}
 
     function enderecoEntrega($conexao,$id){
 
@@ -50,6 +62,7 @@ function cadastroCliente($conexao,$login,$senha){
         }
     }
     
+}
 
     ?>
 

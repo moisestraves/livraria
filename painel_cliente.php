@@ -19,7 +19,8 @@ require 'adm/conexao.php';
 
 <div id="cliente">
 <h1> Bem vindo ao portal do Cliente </h1>
-<p> id_cliente <?php //echo $_SESSION['Cod_cliente'];?>
+<p> olá  <?php echo $_SESSION['Nome'];?>
+<p> No portal do cliente, você tem acesso a todas as informações do cliente</p>
 
 
 </p>
