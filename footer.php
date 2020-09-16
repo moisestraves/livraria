@@ -1,3 +1,4 @@
+</main> <!--Fechamento da Tag Main do site -->
 <!--CORPO DO RODAPÉ-->
 <footer>
 
@@ -19,7 +20,7 @@
     </div>
    <!--<p> Copyright © 2020 Todos direitos reservado Livraria Online</p>--> 
   </footer>
-  </main>
+  
   </body>
    
   

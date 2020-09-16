@@ -62,7 +62,7 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 
 <input  type="text" name="cidade"  value="<?php echo $resultado['Cidade'];?>">
 <input type="text" name="pessoa"  value="<?php echo $resultado['Tipo_Pessoa'];?>"></label></p>
-<a href="atualizar-cadastro.php?id=<?=$resultado['Cod_cliente']; ?>">Editar</a>
+<a href="atualizar-infocadastrocliente.php?id=<?=$resultado['Cod_cliente']; ?>">Editar</a>
 <a href="painel_cliente.php">Voltar</a>
 
 </form>

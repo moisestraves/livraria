@@ -25,7 +25,6 @@ function cadastroCliente($conexao,$login,$senha){
     }
 
 
-
     function enderecoEntrega($conexao,$id){
 
         $enderecoSql = "SELECT cod_cliente ,email,endereco,numero,complemento,cep,bairro FROM cliente WHERE Cod_cliente =('$id')" ;
@@ -43,8 +42,8 @@ function cadastroCliente($conexao,$login,$senha){
 
     }
 
-    //Função que consulta o pedido
-    function conPedido($conexao,$pedido){
+        //Função que consulta o pedido
+         function conPedido($conexao,$pedido){
 
         $sqlPedido = "SELECT * FROM pedido where =('$pedido')";
         $resutadoPedido = mysqli_query($conexao,$sqlPedido);
@@ -54,7 +53,7 @@ function cadastroCliente($conexao,$login,$senha){
        }
 
 
-    function verificaAcesso($teste){
+         function verificaAcesso($teste){
 
         if(isset($_SESSION[$teste])){
             session_destroy();

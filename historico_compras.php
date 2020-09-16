@@ -8,3 +8,12 @@ require 'adm/func_sistema.php';
 ?>
 
 <p>historico de compras</p>
+
+
+<?php
+
+
+
+require 'footer.php';
+
+?>

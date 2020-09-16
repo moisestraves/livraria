@@ -27,10 +27,22 @@ if($resultado < 1){
 
 
     echo "<br><h1> Relatório de Pedidos";
+    /* Aqui Foi inserido uma imagem 
+     quando não é localizado pedido para o cliente, esta imagem é carregada*/
+    echo "<br> <img src='IMG/PedidoNaoLocalizado.png' width='20%
+    '>";
+
     
-    echo "<h3> Não foi Localizamos pedido para você !";
     
     
 }
+
+?>
+
+<?php
+
+
+
+require 'footer.php';
 
 ?>
