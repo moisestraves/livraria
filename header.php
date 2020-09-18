@@ -55,9 +55,9 @@
         <li class="nav-item">
             <a class="nav-link text-white " href="#">LANÇAMENTOS</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white " href="#">ENTRE OU CADASTRAR</a>
-          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link text-white " href="#">ENTRE OU CADASTRE-SE</a>
+          </li>-->
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
 <main>

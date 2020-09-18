@@ -40,12 +40,12 @@ var_dump($resultado);*/
 <!-- CAMPO TYPE HIDDEN -->
 <input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?> ">
 
-<input type="texo"  name="login"  value="<?php echo $resultado['Nome'];?>">
+<input type="texo"  name="nome"  value="<?php echo $resultado['Nome'];?>">
 
 <input type="password" name="senha" placeholder="senha" value="<?php echo $resultado['Senha'];?>"></p>
 
-<input type="text" name="endereco"  value="<?php echo $resultado['Email'];?>">
-<input type="text" name="endereco"  value="<?php echo $resultado['Tel'];?>"></p>
+<input type="text" name="email"  value="<?php echo $resultado['Email'];?>">
+<input type="text" name="telefone"  value="<?php echo $resultado['Tel'];?>"></p>
 
 <input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
 <input type="text" name="numero"  value="<?php echo $resultado['Numero'];?>"></label></p>

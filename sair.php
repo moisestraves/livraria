@@ -5,6 +5,6 @@ session_start();
 
 session_destroy();// Destroy a sessão 
 
-header('location:cliente_login.php?');
+header('location:index.html');
 
 ?>
