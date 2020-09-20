@@ -14,8 +14,8 @@ require 'adm/func_sistema.php';
 
 <p>Faça o seu Cadastro</p>
 <p>
-<input type="e-mail"  name="login" placeholder="email"></p>
-<p><input type="password" name="senha" placeholder="senha"></p>
+<input type="e-mail"  name="login" required placeholder="email"></p>
+<p><input type="password" name="senha" required placeholder="senha"></p>
 <button class="btn btn-primary"  name ="cadastrar"type="submit">Cadastrar</button>
 </form>
 </div>
