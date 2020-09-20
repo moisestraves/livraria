@@ -44,7 +44,7 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 <input  type="text" name="cep"  value="<?php echo $resultado['Cep'];?>">
 
 <input type="text" name="estado"  value="<?php echo $resultado['Estado'];?>"></label></p>
-<button type="subimit" name="alterar">Alterar</button><button type="subimit">Voltar</button>
+<a href="painel_cliente.php"><button type="subimit">Voltar</button></a>
 
 </div>
 

@@ -60,6 +60,10 @@ function cadastroCliente($conexao,$login,$senha){
             header('location:cliente.logar.php?acessonegado');
         }
     }
+
+
+
+    
     
 }
 

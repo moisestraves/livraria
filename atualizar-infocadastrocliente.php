@@ -8,9 +8,10 @@
  // Teste de Validação da sessão OK var_dump($_SESSION);
     //var_dump($_SESSION);
     
-    /*ATENÇÃO LEMBRETE  QUE VEM PELA URL
+    /*ATENÇÃO LEMBRETE PARA  RECEBER A ID  PELA URL
     **********TEM QUE ESTAR COM O CAMPO,NO FORMULÁRIO DE CONSULTA DO CLIENTE ******************** 
     <input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?>">*/
+    
     $id_cliente = $_GET['id'] ;
 
     
@@ -38,28 +39,45 @@ var_dump($resultado);*/
 <h2>Atualizar Cadastro </h2>
 <p>
 <!-- CAMPO TYPE HIDDEN -->
-<input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?> ">
+<input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?>">
+<label>Nome</label>
+    <input type="texto"  name="nome"  value="<?php echo $resultado['Nome'];?>">
 
-<input type="texo"  name="nome"  value="<?php echo $resultado['Nome'];?>">
+<label>Email<label>
+    <input type="email" name="email"  value="<?php echo $resultado['Email'];?>">
+<label>Senha</label>
+    <input type="password" name="senha" placeholder="senha" value="<?php echo $resultado['Senha'];?>"></p>
 
-<input type="password" name="senha" placeholder="senha" value="<?php echo $resultado['Senha'];?>"></p>
+<label>Celular</label>
+    <input type="text" name="telefone"  value="<?php echo $resultado['Tel'];?>"></p>
 
-<input type="text" name="email"  value="<?php echo $resultado['Email'];?>">
-<input type="text" name="telefone"  value="<?php echo $resultado['Tel'];?>"></p>
+<label>Endereço</label>
+    <input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
 
-<input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
-<input type="text" name="numero"  value="<?php echo $resultado['Numero'];?>"></label></p>
+<label>Bairro</label>
+    <input  type="text" name="bairro"  value="<?php echo $resultado['Bairro'];?>">
 
-<input  type="text" name="bairro"  value="<?php echo $resultado['Bairro'];?>">
-<input type="text" name="complemento"  value="<?php echo $resultado['Complemento'];?>"></label></p>
+<label>Número</label>
+    <input type="text" name="numero"  value="<?php echo $resultado['Numero'];?>"></label></p>
 
-<input  type="text" name="cep"  value="<?php echo $resultado['Cep'];?>">
-<input type="text" name="estado"  value="<?php echo $resultado['Estado'];?>"></label></p>
+<label>Complemento</label>
+    <input type="text" name="complemento"  value="<?php echo $resultado['Complemento'];?>"></label></p>
+    
+<label>Cep</label>
+    <input  type="text" name="cep"  value="<?php echo $resultado['Cep'];?>">
 
-<input  type="text" name="cidade"  value="<?php echo $resultado['Cidade'];?>">
-<input type="text" name="pessoa"  value="<?php echo $resultado['Tipo_Pessoa'];?>"></label></p>
+<label>Estado</label>
+    <input type="text" name="estado"  value="<?php echo $resultado['Estado'];?>"></label></p>
+
+<label>Cidade</label>    
+    <input  type="text" name="cidade"  value="<?php echo $resultado['Cidade'];?>">
+
+<label>Pessoa</label>  
+     <input type="text" name="pessoa"  value="<?php echo $resultado['Tipo_Pessoa'];?>"></label></p>
+     
 <!-- Botão que faz o Envio das Informações!-->
 <p> <button type="submit" name="atualizar">Salvar </button></p>
+
 
 </form>
 </div>
