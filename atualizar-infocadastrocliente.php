@@ -25,7 +25,7 @@ $resultado = mysqli_fetch_assoc($resultadousuario);
 var_dump($resultado);*/
 
 
-    var_dump($id_cliente);
+   // var_dump($id_cliente);
 
     
 

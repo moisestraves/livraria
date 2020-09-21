@@ -7,13 +7,8 @@ require 'adm/func_sistema.php';
 
 ?>
 
-<p>historico de compras</p>
+<h3>historico de compras</h3>
+
+<h4>Compra não  localizada !</h4> 
 
 
-<?php
-
-
-
-require 'footer.php';
-
-?>

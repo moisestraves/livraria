@@ -33,16 +33,21 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 <div class="cliente_login">
 <P>
 <h2>Endereço de Entrega</h2>
+<label>Endereço</label>
 <input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
 
+<label>Número</label>
 <input type="text" name="numero"  value="<?php echo $resultado['Numero'];?>"></label>
 
+<label>Bairro</label>
 <input  type="text" name="bairro"  value="<?php echo $resultado['Bairro'];?>"></p>
 
+<label>Complemento</label>
 <input type="text" name="complemento"  value="<?php echo $resultado['Complemento'];?>"></label>
 
+<label>Cep</label>
 <input  type="text" name="cep"  value="<?php echo $resultado['Cep'];?>">
-
+<label>Estado</label>
 <input type="text" name="estado"  value="<?php echo $resultado['Estado'];?>"></label></p>
 <a href="painel_cliente.php"><button type="subimit">Voltar</button></a>
 

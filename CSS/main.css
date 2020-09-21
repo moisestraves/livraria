@@ -2,6 +2,15 @@
      background-color:  #000000;
    }
 
+   /*Formatação do Link Logo Topo*/
+   #logo-top a:hover  {
+    text-decoration: none;
+   }
+   #logo-top a{
+     text-decoration: none;
+     color: black;
+   }
+   
   /*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
   #logo-top  h1{
     display: flex;
@@ -9,6 +18,7 @@
     position: relative;/*Posição do Icone*/
     top: 15px;
     left: 25px; /*alinhamento da margem direita*/
+    color: black;
      
   }
 
@@ -141,7 +151,8 @@
      padding-left: 0px;
      padding-bottom: 0px;
      background-color: white;
-     border: solid 2px;
+     text-align: center;
+     
     
    }
    /*Formatação do layout da tabela*/
