@@ -16,7 +16,7 @@ require 'header.php';
       </div>
       
     </div>
-  </div>
+  
    
   </div>
  
@@ -62,9 +62,6 @@ require 'header.php';
     
 
   </div>
-
-  
-
  </div>
 </div>
 <?php
