@@ -43,39 +43,39 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 <p>
 <!-- CAMPO TYPE HIDDEN -->
 <input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?>">
-<label>Nome</label>
+<p><label>Nome</label>
     <input type="texto"  name="nome"  value="<?php echo $resultado['Nome'];?>">
 
-<label>Email<label>
-    <input type="email" name="email"  value="<?php echo $resultado['Email'];?>">
-<label>Senha</label>
+<p><label>Email<label>
+    <input type="email" name="email"  value="<?php echo $resultado['Email'];?>"></p>
+<p><label>Senha</label>
     <input type="password" name="senha" placeholder="senha" value="<?php echo $resultado['Senha'];?>"></p>
 
-<label>Celular</label>
+<p><label>Celular</label>
     <input type="text" name="telefone"  value="<?php echo $resultado['Tel'];?>"></p>
 
-<label>Endereço</label>
-    <input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
+<p><label>Endereço</label>
+    <input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>"></p>
 
-<label>Bairro</label>
-    <input  type="text" name="bairro"  value="<?php echo $resultado['Bairro'];?>">
+<p><label>Bairro</label>
+    <input  type="text" name="bairro"  value="<?php echo $resultado['Bairro'];?>"></p>
 
-<label>Número</label>
+<p><label>Número</label>
     <input type="text" name="numero"  value="<?php echo $resultado['Numero'];?>"></label></p>
 
-<label>Complemento</label>
+<p><label>Complemento</label>
     <input type="text" name="complemento"  value="<?php echo $resultado['Complemento'];?>"></label></p>
     
-<label>Cep</label>
+<p><label>Cep</label>
     <input  type="text" name="cep"  value="<?php echo $resultado['Cep'];?>">
 
-<label>Estado</label>
+<p><label>Estado</label>
     <input type="text" name="estado"  value="<?php echo $resultado['Estado'];?>"></label></p>
 
-<label>Cidade</label>    
+<p><label>Cidade</label>    
     <input  type="text" name="cidade"  value="<?php echo $resultado['Cidade'];?>">
 
-<label>Pessoa</label>  
+<p><label>Pessoa</label>  
      <input type="text" name="pessoa"  value="<?php echo $resultado['Tipo_Pessoa'];?>"></label></p>
 
 <a href="atualizar-infocadastrocliente.php?id=<?=$resultado['Cod_cliente']; ?>">Editar</a>

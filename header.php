@@ -15,7 +15,7 @@
     </head>
     <body>
       <div id="logo-top">
-        <h1><a href="index.html"> On Livraria Brasil</a></h1>
+        <h1><a href="index.php"> On Livraria Brasil</a></h1>
 
       </div>
    
@@ -55,9 +55,9 @@
         <li class="nav-item">
             <a class="nav-link text-white " href="#">LANÇAMENTOS</a>
           </li>
-          <!--<li class="nav-item">
-            <a class="nav-link text-white " href="#">ENTRE OU CADASTRE-SE</a>
-          </li>-->
+          <li class="nav-item">
+            <a class="nav-link text-white " href="cliente_login.php">ENTRE OU CADASTRE-SE</a>
+          </li>
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
 <main>

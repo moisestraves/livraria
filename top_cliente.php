@@ -15,7 +15,7 @@
     </head>
     <body>
       <div id="logo-top">
-        <h1><a href="index.html"> On Livraria Brasil</a></h1>
+        <h1><a href="index.php"> On Livraria Brasil</a></h1>
 
       </div>
    
