@@ -5,9 +5,9 @@ require 'adm/conexao.php';
 
 //Função Cadastro do  novo cliente
 function cadastroCliente($conexao,$login,$senha){
-  //  $md = md5($senha);
+  $md = md5($senha);
     $sqlCadCliente =' INSERT INTO cliente (Cod_cliente, Nome, Email, Senha, Tel, Endereco, Bairro, Numero, Complemento, Cep, Estado, Cidade, Tipo_Pessoa)';
-    $sqlCadCliente.= "VALUES ('NULL', '', '$login', '$senha', '', '', '', '0', '', '', '', '', '')";
+    $sqlCadCliente.= "VALUES ('NULL', '', '$login', '$md', '', '', '', '0', '', '', '', '', '')";
    
      if(mysqli_query($conexao,$sqlCadCliente) ){
 
