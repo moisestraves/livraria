@@ -66,7 +66,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="img/capa.png" alt="Notebook Imagem">
-        
+      </div>
       </div>
       
       
