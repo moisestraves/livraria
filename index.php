@@ -14,7 +14,7 @@ require 'cabecadapagina.php';
       <div class="carousel-item">
         <img class="d-block w-100" src="img/bannerLivroColorido.png" alt="Livros coloridos imagem ">
       </div>
-      
+    </div>
     </div>
   </div>
    
