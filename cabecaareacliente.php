@@ -12,7 +12,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="CSS/main.css">
 <div id="logo-top">
-  <h1> On Livraria Brasil</h1>
+<h1><a href="index.php"> On Livraria Brasil</a></h1>
 
 </div>
 
@@ -29,8 +29,8 @@
         </svg></h5>
 </div>
     <!--Configuração do topo da página local do menu principal da página-->
-   <!--Configuração do topo da página local do menu principal da página-->
-   <div id="nav">
+      <!--Configuração do topo da página local do menu principal da página-->
+      <div id="nav">
            <ul class="nav justify-content-center">
            <li class="nav-item">
            <a class="nav-link text-white  active" href="consulta_cliente.php">CADASTRO</a>
@@ -54,6 +54,8 @@
           <li class="nav-item">
             <a class="nav-link text-white " href="sair.php">SAIR</a>
           </li>
+</ul>
+</div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
 
 </head>
 <main>

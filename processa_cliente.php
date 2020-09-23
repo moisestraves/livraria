@@ -1,7 +1,7 @@
 <?php
  
 session_start();
-require 'header.php';
+require 'cabecadapagina.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
