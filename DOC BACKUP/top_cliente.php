@@ -34,10 +34,9 @@
     </div>
     <!--Configuração do topo da página local do menu principal da página-->
       <div id="nav">
-          <ul class="nav justify-content-center">
-          
-            <li class="nav-item">
-             <a class="nav-link text-white  active" href="consulta_cliente.php">CADASTRO</a>
+           <ul class="nav justify-content-center">
+           <li class="nav-item">
+           <a class="nav-link text-white  active" href="consulta_cliente.php">CADASTRO</a>
          </li>
        
          <li class="nav-item">
@@ -60,4 +59,3 @@
           </li>
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
-<main>

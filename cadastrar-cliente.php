@@ -1,6 +1,6 @@
 <?php
 
-require 'header.php';
+require 'cabecadapagina.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
@@ -44,6 +44,6 @@ require 'adm/func_sistema.php';
 
 
 
-require 'footer.php';
+require 'rodape.php';
 
 ?>

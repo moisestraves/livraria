@@ -8,7 +8,7 @@ if (!$_SESSION['Email']) {
     header('location:cliente_login.php');
 }
 
-require 'top_cliente.php';
+require 'cabecaareacliente.php';
 require 'adm/func_sistema.php';
 require 'adm/conexao.php';
 
@@ -18,10 +18,15 @@ require 'adm/conexao.php';
 
 
 <div id="cliente">
-<h1> Bem vindo ao portal do Cliente </h1>
+<h2> Bem vindo ao portal do Cliente </h2>
 <p> olá  <?php echo $_SESSION['Nome'];?>
 <p> No portal do cliente, você tem acesso a todas as informações do cliente</p>
 
 
 </p>
 </div>
+
+
+<?php
+
+require 'rodape.php';

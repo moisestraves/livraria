@@ -1,8 +1,12 @@
 <?php
 session_start();
-require 'header.php';
+require 'cabecadapagina.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
+
+//VERIFICA SE  O USUÁRIO ESTA LOGADO,SE NÃO ESTIVER SERÁ DIRECIONADO PARA PAGINA DE LOGIN OU CADASTRO
+
+
 ?>
 <div id="alinharCadastro">
 
@@ -39,5 +43,5 @@ require 'adm/func_sistema.php';
 
 
 
-require 'footer.php';
+require 'rodape.php';
 ?>

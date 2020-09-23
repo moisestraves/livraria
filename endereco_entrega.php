@@ -7,7 +7,7 @@ if (!$_SESSION['Email']) {
 
     header('location:cliente_login.php');
 }
-require 'top_cliente.php';
+require 'cabecaareacliente.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
@@ -33,6 +33,7 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 <div class="cliente_login">
 <P>
 <h2>Endereço de Entrega</h2>
+<input type="hidden"  name="id" value="<?php echo $resultado['Email'];?>">
 <label>Endereço</label>
 <input type="text" name="endereco"  value="<?php echo $resultado['Endereco'];?>">
 
@@ -53,10 +54,13 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 
 </div>
 
+
+</div>
+
 <?php
 
 
 
-require 'footer.php';
+require 'rodape.php';
 
 ?>

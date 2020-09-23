@@ -1,4 +1,5 @@
-</main> <!--Fechamento da Tag Main do site -->
+</section> <!--Fechamento da Tag Main do site -->
+
 <!--CORPO DO RODAPÉ-->
 <footer>
 
@@ -18,7 +19,7 @@
       </svg>
      <img src="IMG/facebook-oval.png" width="3%">
     </div>
-   <!--<p> Copyright © 2020 Todos direitos reservado Livraria Online</p>--> 
+  
   </footer>
   
   </body>

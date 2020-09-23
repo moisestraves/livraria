@@ -1,6 +1,6 @@
 <?php
 
-require 'top_cliente.php';
+require 'cabecaareacliente.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
@@ -12,3 +12,6 @@ require 'adm/func_sistema.php';
 <h4>Compra não  localizada !</h4> 
 
 
+<?php
+
+require 'rodape.php';

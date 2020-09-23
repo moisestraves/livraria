@@ -1,7 +1,7 @@
 <?php
 
  session_start();
- require 'top_cliente.php';   
+ require 'cabecaareacliente.php';   
  require 'adm/conexao.php';
  require 'adm/func_sistema.php';
 
@@ -84,3 +84,8 @@ var_dump($resultado);*/
 
 <?php
 
+
+
+
+require 'rodape.php';
+?>

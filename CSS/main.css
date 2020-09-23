@@ -55,7 +55,7 @@
 /*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
 #livros img{
 		
- max-width:63%;
+ max-width:40%;
  background-color: white;
   
 }
@@ -63,6 +63,7 @@
 .botao-comprar p{
   font-size: 10;
   height: 3px 1px;
+  padding: 0;
   
 }
 /*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
@@ -70,6 +71,7 @@
   border-color: #00FFFF;
   background-color: white;
   width: 200px;
+  
 }
   /*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
     #logo-top  h1{
@@ -105,9 +107,12 @@
     position: relative;
     width: 100%;
      /*Ajuste da altura do Footer*/
-    padding: 20px; /*Ajuste da formatação do topo*/
+    /*padding: 20px; Ajuste da formatação do topo*/
     color: white;
-    background-color: #1C1C1C
+    background-color: #1C1C1C;
+    bottom: 0px;
+    padding: 0px;
+    
      }
 
    footer ul {
@@ -377,6 +382,11 @@
   
   
      }
+     #alinharCadastro{
+
+      display: flex;
+      padding-bottom: auto;
+    }
   
     .cadastro_cliente button{
       

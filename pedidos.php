@@ -6,7 +6,7 @@ if (!$_SESSION['Email']) {
 
     header('location:cliente_login.php');
 }
-require 'top_cliente.php';
+require 'cabecaareacliente.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
@@ -29,20 +29,13 @@ if($resultado < 1){
     echo "<br><h1> Relatório de Pedidos";
     /* Aqui Foi inserido uma imagem 
      quando não é localizado pedido para o cliente, esta imagem é carregada*/
-    echo "<br> <img src='IMG/PedidoNaoLocalizado.png' width='20%
-    '>";
+    echo "<h2> <b> Pedido não localizado!";
 
     
     
     
 }
 
-?>
-
-<?php
+require 'rodape.php';
 
 
-
-require 'footer.php';
-
-?>

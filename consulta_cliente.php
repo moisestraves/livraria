@@ -3,16 +3,16 @@
 session_start();
 
 require 'adm/conexao.php';
-require 'top_cliente.php';
+require 'cabecaareacliente.php';
 require 'adm/func_sistema.php';
 
 /* Aqui faz a verificação da sessão
-se o cliente não estiver logado vai rediricionar para o login*/
+se o cliente não estiver logado vai rediricionar para o login
 if (!$_SESSION['Email']) {
 
     header('location:cliente_login.php');
    
-}
+}*/
 
 
 //Aqui estou Salvando o email do cliente na sessão para Selecionar os dados no banco
@@ -88,6 +88,6 @@ $resultado= mysqli_fetch_assoc($queryCliente);
 
 
 
-require 'footer.php';
+require 'rodape.php';
 
 ?>

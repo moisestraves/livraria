@@ -1,9 +1,9 @@
 <?php
-require 'header.php';
+require 'cabecadapagina.php';
 ?>
-<!--Banner Principal do site Slider-->
+ <!--Banner Principal do site Slider-->
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+ <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="img/capa.png" alt="Notebook Imagem">
@@ -17,14 +17,13 @@ require 'header.php';
       
     </div>
   </div>
-  
    
-  </div>
+  
  
   
 <!--Corpo da Estrutura dos pagina inicial dos livros-->
 
-
+<aside>
 <div id="livros">
 <div>
   <img src="IMG/caminhos-infindos.jpg">
@@ -63,8 +62,12 @@ require 'header.php';
     
 
   </div>
+</div>
+</aside>
+  
+
  </div>
 </div>
 <?php
 
-require 'footer.php';
+require 'rodape.php';

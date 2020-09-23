@@ -61,4 +61,4 @@
           </li>
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
-<main>
+<section>
