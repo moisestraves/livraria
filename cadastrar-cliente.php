@@ -29,6 +29,8 @@ require 'adm/func_sistema.php';
     
     $senhaCliente = $_POST['senha'];
 
+    
+
     $resultado=cadastroCliente($conexao,$cliente,$senhaCliente);
     
    

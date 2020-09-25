@@ -5,6 +5,55 @@
      padding-right: 0px;
    }
 
+   
+   html, body{
+    height: 100%;
+    margin: 0px 0px;
+    padding: 0px;
+
+
+   }
+  .adm button {
+    margin-left: 600px;
+    height: auto;
+    color: rgb(253, 253, 253);
+    background: black;
+    align-content: center;
+    
+   
+  
+  }
+  .adm h1{
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding-top: 70px;
+  }
+
+  .adm input{
+    padding: 1px ;
+    border-radius:  solid 3px;
+    background-color: rgb(240, 233, 233);
+    border-color: seashell;
+    
+    margin-left: 600px;
+    
+  }
+
+  
+   body{
+
+    display: flex;
+    flex-direction: column;
+   }
+   .conteudo{
+     flex: 1 0 auto;
+   }
+
+   /*SEMPRE USAR PARA FIXAR RODAPÉ*/
+   .rodape {
+     flex-shrink: 0;
+   }
    /*Formatação do Link Logo Topo*/
    #logo-top a:hover  {
     text-decoration: none;
@@ -105,13 +154,13 @@
     /*FORMTAÇÃO DAS CONFIGURAÇÃO DO FOOTER É AQUI8*/
    footer {
     position: relative;
-    width: 100%;
+    
      /*Ajuste da altura do Footer*/
     /*padding: 20px; Ajuste da formatação do topo*/
     color: white;
     background-color: #1C1C1C;
     bottom: 0px;
-    padding: 10px;
+    width: 100%;
     
     
      }
@@ -134,11 +183,11 @@
      font-stretch: semi-condensed;
     
    }
-
+  
    /*formtação e espaço dos icones do footer*/
    .rodapeicone{
     display: inline;
-    margin-left: 750px;
+    margin-left: 650px;
    }
 
    footer p{
@@ -290,7 +339,7 @@
   }
 
    /*AQUI É O CORPO DE TODA CONFIGURAÇÃO RESPONSIVA DO SITE*/
-       @media  screen and (max-width: 600px) {
+       @media  screen and (max-width: 300px) {
     
              #caixa-top input{
               display: flex;      
@@ -304,7 +353,7 @@
        #livros{
       display: block;
       display:flex;
-      margin-left: 0px ; /*formatação da margem*/
+      margin: 0px ; /*formatação da margem*/
       padding: 20px;
       flex-direction:row; /*DIRECIONAMENTO EM LINHA */
       flex-wrap:nowrap; /*NÃO TEM QUEBRA DE LINHA*/
@@ -387,6 +436,7 @@
 
       display: flex;
       padding-bottom: auto;
+      margin: 0px;
     }
   
     .cadastro_cliente button{
