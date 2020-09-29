@@ -18,8 +18,13 @@ $statusUsuario =$_POST['ativo'];
 // CHAMANDO A FUNÇÃO DE INSERT 
 //var_dump($conexao);
 
-cliente();
-$instatusUsuario = cadastrousuario($conexao ,$nome , $cargo ,$perfil ,$departamento , $email , $senha ,$statusUsuario);
+
+
+
+    
+$instatusUsuario=cadastrousuario($conexao ,$nome , $cargo ,$perfil ,$departamento , $email , $senha ,$statusUsuario);
+
+var_dump($instatusUsuario);
 
 if($instatusUsuario == 1){
 
@@ -28,7 +33,7 @@ if($instatusUsuario == 1){
 
     echo '<br><br>NÃO FOI POSSIVEL CADASTRAR O USUÁRIO <br> <br>ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA !';
 }
-
+//cliente();
 
 }
 /*var_dump($nome);

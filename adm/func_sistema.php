@@ -17,18 +17,22 @@ function cadastroCliente($conexao,$login,$senha){
 
         echo " Erro:".$sqlCadCliente. "<br>" .mysqli_error($conexao);
      }
+    
+    }
 
-     
+    //Função Chamada do  msg cliente  
     function cliente(){
 
         echo "Bem vindo";
     }
+
+    // Função que é chamada para cadastrar usuário cadastrado pelo administrador do sistema
     function cadastrousuario($conexao, $nome,  $cargo, $perfil, $departamento, $email, $senha ,$ativo)
     {   $md = md5($senha);
         $sql = 'INSERT INTO usuario(Nome, Cargo,Perfil,Departamento,Email,Senha,Ativo)';
         $sql .= " VALUES ('$nome','$cargo','$perfil,'$departamento','$email' ,'$md','$ativo')";
 
-        var_dump($sql);
+        //var_dump($sql);
     
         return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
     }
@@ -73,7 +77,7 @@ function cadastroCliente($conexao,$login,$senha){
 
     
     
-}
+
 
     ?>
 
