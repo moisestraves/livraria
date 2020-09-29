@@ -13,34 +13,8 @@
 
 
    }
-  .adm button {
-    margin-left: 600px;
-    height: auto;
-    color: rgb(253, 253, 253);
-    background: black;
-    align-content: center;
-    
-   
-  
-  }
-  .adm h1{
 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    padding-top: 70px;
-  }
-
-  .adm input{
-    padding: 1px ;
-    border-radius:  solid 3px;
-    background-color: rgb(240, 233, 233);
-    border-color: seashell;
-    
-    margin-left: 600px;
-    
-  }
-
-  
+ 
    body{
 
     display: flex;
@@ -327,6 +301,71 @@
 
 
    }
+
+     /*Formatação Pagina Administrativa e login*/
+
+     .adm h1{
+       
+      text-align: center;
+ 
+       padding-top: 40px;    
+    }
+ 
+      .adm button {
+    
+     height: auto;
+     color: rgb(253, 253, 253);
+     background: black;
+     
+     
+    
+   
+   }
+ 
+   .adm input{
+     padding: 1px ;
+     border-radius:  solid 3px;
+     background-color: rgb(240, 233, 233);
+     border-color: seashell;
+     
+        
+   }
+
+   .formularioCadastro{
+   
+    
+    
+    padding-top: 50px;
+    
+  
+   }
+   /* FORMATAÇÃO CAIXA */
+   .formularioCadastro input{
+
+    height: 25px;
+    width: 250px;
+   }
+
+   /* FORMATAÇÃO DO BOTÃO */
+   .formularioCadastro button{
+    height: 30px;
+    width: 100px;
+    border-radius: solid 10px;
+    border-color: #EEE9E9;
+    background-color: black;
+    color: blanchedalmond;
+  
+   }
+ 
+  
+   .login_adm{
+ 
+     display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;   
+   }  
+   
 
   .cadastro_cliente button{
     

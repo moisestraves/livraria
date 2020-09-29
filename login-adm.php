@@ -12,11 +12,11 @@ require 'adm/conexao.php';
 
 <div class="adm">
 
-<h1>Central Administrativa </h1>
+<h1>Área Administrativa </h1>
     <div class="login_adm">
         
     
-    <form method="POST"  action="processa_cliente.php">
+    <form method="POST"  action="processa-adm.php">
    
         <p>
             

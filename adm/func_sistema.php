@@ -23,7 +23,15 @@ function cadastroCliente($conexao,$login,$senha){
 
         echo "Bem vindo";
     }
+    function cadastrousuario($conexao, $nome,  $cargo, $perfil, $departamento, $email, $senha ,$ativo)
+    {   $md = md5($senha);
+        $sql = 'INSERT INTO usuario(Nome, Cargo,Perfil,Departamento,Email,Senha,Ativo)';
+        $sql .= " VALUES ('$nome','$cargo','$perfil,'$departamento','$email' ,'$md','$ativo')";
 
+        var_dump($sql);
+    
+        return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+    }
 
     function enderecoEntrega($conexao,$id){
 
