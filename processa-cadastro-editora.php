@@ -22,8 +22,7 @@ $resultado = cadastrarEditora($conexao,$nome,$contato,$email,$telefone);
   
 if($resultado == 1){
 
-    echo 'Editora Cadastrada com Sucesso !';
-    //header('location:painel-adm.php');
+    header('location:painel-adm.php');
 }else {
 
     echo '<br><br>NÃO FOI POSSIVEL CADASTRAR Editora <br> <br>ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA !';

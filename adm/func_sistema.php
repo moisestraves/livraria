@@ -46,7 +46,9 @@ function cadastroCliente($conexao,$login,$senha){
          $sql .= " VALUES ('$nome','$contato','$email','$telefone')";
  
          //var_dump($sql);
-     
+
+         
+         echo 'Editora Cadastrada com Sucesso !';
          return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
      }
  
