@@ -24,8 +24,8 @@ require 'adm/conexao.php';
 <p>Escolha o que deseja gerenciar:</p>
 <ul>
 <li><a href="cadastro-usuario-sistema.php">Cadastro de usuário</a></li>
-<li><a href="#">Cadastrar Livro</a></li>
-<li><a href="#">Cadastrar Produto</a></li>
+<li><a href="cadastrar-editora.php">Cadastrar Editora</a></li>
+<li><a href="castrar-livro.php">Cadastrar Livro</a></li>
 <li><a href="#">Cadastrar categorias</a></li>
 <li><a href="#">Listar clinetes</a></li>
 </ul>

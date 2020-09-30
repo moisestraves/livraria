@@ -20,22 +20,40 @@ function cadastroCliente($conexao,$login,$senha){
     
     }
 
-    //Função Chamada do  msg cliente  
+   //Function what call 
     function cliente(){
 
         echo "Bem vindo";
     }
 
-    // Função que é chamada para cadastrar usuário cadastrado pelo administrador do sistema
-    function cadastrousuario($conexao, $nome,  $cargo, $perfil, $departamento, $email, $senha ,$ativo)
-    {   $md = md5($senha);
-        $sql = 'INSERT INTO usuario(Nome, Cargo,Perfil,Departamento,Email,Senha,Ativo)';
-        $sql .= " VALUES ('$nome','$cargo','$perfil,'$departamento','$email' ,'$md','$ativo')";
+   //Function what call for insert user
+    
+    function cadastrousuario($conexao ,$nome ,  $cargo ,$perfil ,$departamento , $email , $senha ,$ativo){
+     $md = md5($senha);
+        $sql = 'INSERT INTO usuario ( Nome,  Cargo, Perfil, Departamento, Email, Senha, Ativo)';
+        $sql .= " VALUES ('$nome','$cargo','$perfil','$departamento','$email ','$md','$ativo')";
 
         //var_dump($sql);
     
         return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
     }
+
+    //Function what call for insert user publisher and contact
+    function cadastrarEditora($conexao ,$nome ,$contato ,$email, $telefone){
+     
+     
+         $sql = 'INSERT INTO editora ( Editora ,Contato, Email, Tel)';
+         $sql .= " VALUES ('$nome','$contato','$email','$telefone')";
+ 
+         //var_dump($sql);
+     
+         return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+     }
+ 
+
+
+
+
 
     function enderecoEntrega($conexao,$id){
 

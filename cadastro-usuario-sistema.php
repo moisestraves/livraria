@@ -23,7 +23,7 @@ require 'adm/conexao.php';
 
 <input type="text" name="nome" placeholder="Nome Completo" required>
 
-<input type="email" name="email" placeholder="Email" required >
+<input type="text" name="email" placeholder="Email" required >
 
 </p>
 
@@ -35,23 +35,20 @@ require 'adm/conexao.php';
 <P>
     <input type="password" name="senha" placeholder="Senha" required >
     <!--SELECT DO PERFIL DO USUÁRIO-->
-    <select name ="ativo" required>
-    <option >Usuario Ativo</option>
-    <option value="S">S</option>
-    <option value="N">N</option>
-
-</select>
+    <select name ="ativo">
+     <option value="">Usuário Ativo ?</option>
+     <option value="S">S</option>
+     <option value="N" require>N</option>
+     </select> 
 </p>
 <P>
   
-<select name ="perfil" required>
-    <option >Administrador</option>
+<select name ="perfil">
+    <option value ="">Perfil Administrador ?</option>
     <option value="S">S</option>
     <option value="N">N</option>
 
 </select>
-<input type="Datetime-local" name="data" placeholder="data" required>
-</p>
 
 <p>
 
