@@ -10,13 +10,8 @@
     height: 100%;
     margin: 0px 0px;
     padding: 0px;
-
-
    }
-
- 
    body{
-
     display: flex;
     flex-direction: column;
    }
@@ -24,10 +19,7 @@
      flex: 1 0 auto;
    }
 
-   /*SEMPRE USAR PARA FIXAR RODAPÉ*/
-   .rodape {
-     flex-shrink: 0;
-   }
+  
    /*Formatação do Link Logo Topo*/
    #logo-top a:hover  {
     text-decoration: none;
@@ -58,7 +50,6 @@
     margin-left: 350px;
     margin-right: 100px;
     background-color: white;
-    
    
 }
 /* FORMATAÇÃO DO BLOCO LIVROS */    
@@ -72,8 +63,6 @@
   justify-content: center ; /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
   text-align: center;
 }
-
-
 
 /*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
 #livros img{
@@ -116,16 +105,12 @@
       background-color: white;
       width: 100%;
       font-size: 15px;
-    
-      
-   
-     
-    }
+  }
     .carrinho h5{
-      padding-top:0px;
+     padding-top:0px;
       
     }
-    /*FORMTAÇÃO DAS CONFIGURAÇÃO DO FOOTER É AQUI8*/
+    /*FORMTAÇÃO DAS CONFIGURAÇÃO DO FOOTER É AQUI*/
    footer {
     position: relative;
     
@@ -169,6 +154,11 @@
      font-size: small;
     
    }
+
+    /*SEMPRE USAR PARA FIXAR RODAPÉ*/
+    .rodape {
+      flex-shrink: 0;
+    }
 
    #alinharCadastro{
 

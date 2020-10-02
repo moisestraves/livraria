@@ -25,7 +25,7 @@ $restuladoInsertUsuario=cadastrousuario($conexao,$nome,$cargo,$perfil,$departame
   
 if($restuladoInsertUsuario== 1){
 
-    echo 'USUÁRIO CADASTRADO COM SUCESSO !';
+   
     header('location:painel-adm.php');
 }else {
 

@@ -39,28 +39,28 @@
     <!--Configuração do topo da página local do menu principal da página-->
       <div id="nav">
           <ul class="nav justify-content-center">
-          
+     
             <li class="nav-item">
-             <a class="nav-link text-white  active" href="#">LIVROS</a>
+            <!-- <a class="nav-link text-white  active" href="#">LIVROS</a>-->
          </li>
        
          <li class="nav-item">
-          <a class="nav-link text-white " href="#">PRODUTOS</a>
+         <!-- <a class="nav-link text-white " href="#">PRODUTOS</a>-->
+        </li>
+       <h5 class="text-white" >Informações do Usuário</h5>
+        <li class="nav-item">
+        |<!--  <a class="nav-link text-white " href="#">PROMOÇÕES</a>-->
         </li>
        
         <li class="nav-item">
-          <a class="nav-link text-white " href="#">PROMOÇÕES</a>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link text-white " href="#">EBOOKS</a>
+         <!-- <a class="nav-link text-white " href="#">EBOOKS</a>-->
         </li>
         
         <li class="nav-item">
-            <a class="nav-link text-white " href="#">LANÇAMENTOS</a>
+            <!--<a class="nav-link text-white " href="#">LANÇAMENTOS</a>-->
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="cliente-login.php">ENTRE OU CADASTRE-SE</a>
+           <!-- <a class="nav-link text-white " href="cliente-login.php">ENTRE OU CADASTRE-SE</a>-->
           </li>
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->

@@ -12,8 +12,9 @@ require 'adm/conexao.php';
 
 <div class="adm">
 
-<h1>Área Administrativa </h1>
-    <div class="login_adm">
+<h5>Área Administrativa </h5>
+    
+<div class="login_adm">
         
     
     <form method="POST"  action="processa-adm.php">
@@ -34,6 +35,7 @@ require 'adm/conexao.php';
     </form>
     </div>
 </div>
+
     <?php
     require 'rodape.php';
 

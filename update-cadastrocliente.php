@@ -32,7 +32,7 @@ if(isset($_POST['atualizar'])){
       
       $resultado = $sqlquery;
       
-      var_dump($resultado);
+      //var_dump($resultado);
       
       if($resultado ==1){
       
