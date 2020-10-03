@@ -42,7 +42,7 @@ var_dump($resultado);*/
 <div class="form-group">
 <div class="foto">
     
-<img src="IMG/usuario-negro.png" alt="..." class="rounded-circle" width="9%">
+<img src="IMG/usuario-negro.png" alt="Foto Usuário" class="rounded-circle" width="9%">
 </div>
 <!-- CAMPO TYPE HIDDEN -->
 <input type="hidden"  name="id" value="<?php echo $resultado['Cod_usuario'];?>">

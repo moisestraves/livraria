@@ -1,7 +1,9 @@
 <?php
-require 'cabecadapagina.php';
-require 'adm/func_sistema.php';
+
 require 'adm/conexao.php';
+
+require 'header-areaadministrativa.php';
+
 
 
 ?>

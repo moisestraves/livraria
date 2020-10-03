@@ -1,9 +1,11 @@
 <?php
  
 session_start();
-require 'cabecadapagina.php';
 require 'adm/conexao.php';
+require 'cabecaarea-admin.php';
+
 require 'adm/func_sistema.php';
+
 
 
 

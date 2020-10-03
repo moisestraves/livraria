@@ -53,6 +53,20 @@ function cadastroCliente($conexao,$login,$senha){
      }
  
 
+     
+    //Function what call for insert books
+
+    
+    function cadastrarLivro($conexao,$Codigo_editora,$nome_livro,$autor,$preco,$categoria,$registro_livro,$ano_lancamento){
+        $sql ='INSERT INTO livro ( Cod_editora, Nome_livro, Autor, Preco, Categoria, ISBN, Ano)';
+        $sql .= " VALUES ( '$Codigo_editora', '$nome_livro', '$autor', '$preco', '$categoria', '$registro_livro', '$ano_lancamento')";
+        
+       
+
+        return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+     }
+    
+
 
 
 
