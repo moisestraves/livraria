@@ -12,10 +12,11 @@ session_start();
     **********TEM QUE ESTAR COM O CAMPO HIDDEN,NO FORMULÁRIO DE CONSULTA DO CLIENTE ******************** 
     <input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?>">*/
     
-    $id_cliente = $_GET['id'] ;
+    $id_livro = $_GET['id'] ;
+    var_dump($id_livro);
 
     
-    $selecionardados = "SELECT * FROM livro where Cod_livro ='$id_cliente'"; // select *from config
+    $selecionardados = "SELECT * FROM livro where Cod_livro ='$id_livro'"; // select *from config
     $resultadousuario = mysqli_query($conexao, $selecionardados);
 
 // Leitura do parâmetro selecionado no banco de dados para edição

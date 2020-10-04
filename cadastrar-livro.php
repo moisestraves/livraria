@@ -11,10 +11,6 @@ if (!$_SESSION['Email']) {
 require 'cabecaarea-admin.php';
 require 'adm/func_sistema.php';
 require 'adm/conexao.php';
-
- 
-
-
 ?>
 
 

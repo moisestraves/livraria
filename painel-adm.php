@@ -39,7 +39,7 @@ require 'adm/conexao.php';
 
 <h5>Relatórios</h5>
 <ul>
-<li><a href="">Clientes</a></li>
+<li><a href="consulta-cadastro-livros.php">Livros Cadastrados </a></li>
 </ul>  
 
 </div>
