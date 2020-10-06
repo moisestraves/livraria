@@ -45,7 +45,7 @@
        
          
          <li class="nav-item">
-          <a class="nav-link text-white " href="relatorio.php">RELATÓRIO</a>
+         <!-- <a class="nav-link text-white " href="relatorio.php">RELATÓRIO</a>-->
         </li>
        
         <li class="nav-item">

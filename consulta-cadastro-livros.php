@@ -12,9 +12,11 @@ if (!$_SESSION['Email']) {
 
    
 }
-$resultado;
+
 
 ?>
+
+
 
 <div class="container">
 <div class="table-responsive">
@@ -34,16 +36,26 @@ $resultado;
        
     </tr>
     </thead>
+
+    <?php  $relatorioLivros =relatoriLivros($conexao);
+    
+    foreach ($relatorioLivros as $livro){
+
+    
+    ?>
+
     <tr>
-    <td>Use a Cabeça Java</td>
-    <td> Kathy Sierra, Bert Bates</td>
-    <td>R$ 170,00</td>
-    <td>Informática</td>
-    <td>2003</td>
-    <td> <a href="editar-livro?id=<?=$resultado['Cod_usuario']; ?>"> Editar </td>
+    
+    <td><?=$livro['Nome_livro']; ?></td>
+    <td><?=$livro['Autor']; ?> </td>
+    <td><?=$livro['Preco']; ?></td>
+    <td><?=$livro['Categoria']; ?></td>
+    <td><?=$livro['Ano']; ?></td>
+    <td> <a href="editar-livro.php?id=<?=$livro['Cod_livro']; ?>"> Editar </td>
     <td> <a href="#"> Excluir<!--<img src="IMG/lapis.png" width="5%">--></a> </td>
     </tr>
-   
+    <?php
+    } ?>
     </table>
 </div>
 </div>

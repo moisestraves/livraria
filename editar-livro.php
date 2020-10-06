@@ -1,7 +1,7 @@
 <?php
 
 session_start();
- require 'header-usuario-adm.php';   
+ require 'cabecaarea-admin.php';   
  require 'adm/conexao.php';
  require 'adm/func_sistema.php';
 
@@ -13,10 +13,10 @@ session_start();
     <input type="hidden"  name="id" value="<?php echo $resultado['Cod_cliente'];?>">*/
     
     $id_livro = $_GET['id'] ;
-    var_dump($id_livro);
+   //var_dump($id_livro);
 
     
-    $selecionardados = "SELECT * FROM livro where Cod_livro ='$id_livro'"; // select *from config
+    $selecionardados = "SELECT * FROM livro_teste where Cod_livro ='$id_livro'"; // select *from config
     $resultadousuario = mysqli_query($conexao, $selecionardados);
 
 // Leitura do parâmetro selecionado no banco de dados para edição
@@ -37,11 +37,11 @@ var_dump($resultado);*/
     <article>
 
 
-<div class="formularioCadastro">
+<div class="formgroup">
     
 <div class="row">
 
-<form method="POST" action="processa-cadastro-livro.php">
+<form method="POST" action="update-cadastro-livro.php">
 
 </div>
 <!-- CAMPO TYPE HIDDEN -->
@@ -81,7 +81,7 @@ var_dump($resultado);*/
 </p>
 
 
-<p><label>Cadegoria</label>
+<p><label>Categoria</label>
 <input type="text"  class="form-control form-control-sm"  name="categoria" value="<?php echo $resultado['Categoria'];?>">
 </p>
    
@@ -96,8 +96,7 @@ var_dump($resultado);*/
 <input type="text"  class="form-control form-control-sm"  name="ano" value="<?php echo $resultado['Ano'];?>" >
 </p>
  
-<a href="editar-perfil-usuario.php?id=<?=$resultado['Cod_livro']; ?>">Editar</a>
-<a href="painel-adm.php">Voltar</a>
+<p><button type="submit" class="btn btn-dark" > Salvar </button></p>
 
 </form>
 </div>

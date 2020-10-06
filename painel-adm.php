@@ -30,7 +30,7 @@ require 'adm/conexao.php';
 <li><a href="cadastrar-editora.php">Cadastrar Editora</a></li>
 <li><a href="cadastrar-livro.php">Cadastrar Livro</a></li>
 <li><a href="#">Cadastrar categorias</a></li>
-<li><a href="#">Listar clinetes</a></li>
+
 </ul>
 </div>
 
@@ -39,7 +39,9 @@ require 'adm/conexao.php';
 
 <h5>Relatórios</h5>
 <ul>
-<li><a href="consulta-cadastro-livros.php">Livros Cadastrados </a></li>
+<li><a href="consulta-cadastro-livros.php">Consulta de Livros</a></li>
+<li><a href="#">Consulta Clientes</a></li>
+<li><a href="#">Consulta  Usuários</a></li>
 </ul>  
 
 </div>
@@ -52,6 +54,7 @@ require 'adm/conexao.php';
 </ul>  
 
 </div>
+
 </div>
             
        <?php

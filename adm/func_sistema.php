@@ -58,7 +58,7 @@ function cadastroCliente($conexao,$login,$senha){
 
     
     function cadastrarLivro($conexao,$Codigo_editora,$nome_livro,$autor,$preco,$categoria,$registro_livro,$ano_lancamento){
-        $sql ='INSERT INTO livro ( Cod_editora, Nome_livro, Autor, Preco, Categoria, ISBN, Ano)';
+        $sql ='INSERT INTO livro_teste ( Cod_editora, Nome_livro, Autor, Preco, Categoria, ISBN, Ano)';
         $sql .= " VALUES ( '$Codigo_editora', '$nome_livro', '$autor', '$preco', '$categoria', '$registro_livro', '$ano_lancamento')";
         
        
@@ -106,8 +106,22 @@ function cadastroCliente($conexao,$login,$senha){
             header('location:cliente.logar.php?acessonegado');
         }
     }
-
-
+    //Function call list books
+    function relatoriLivros($conexao)
+    {
+        $buscarlivros = 'SELECT *  FROM livro_teste ORDER BY Cod_livro';
+        
+        $resultado = mysqli_query($conexao, $buscarlivros);
+       
+        $livros = array();
+       
+        while ($livro = mysqli_fetch_assoc($resultado)) {
+            
+            $livros[] = $livro;
+        }
+    
+        return $livros;
+    }
 
     
     
