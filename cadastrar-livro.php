@@ -27,21 +27,22 @@ require 'adm/conexao.php';
     <!-- Aqui foi inserido um select , para buscas os nomes das editoras no banco-->  
  <p>
 <select class="form-control form-control-sm" name="select_editora">
-    <option>Editora</option>
+<option>EDITORA   </option> 
     <?php
-       $sqleditora = "SELECT Cod_editora , Editora  FROM editora";
+       $sqleditora = "SELECT Cod_editora , Nome_editora  FROM editora";
        $queryeditora = mysqli_query($conexao,$sqleditora);
    
-      // $editora = array();
+       print_r($queryeditora);
+      //$editora = array();
    
        while($editoras = mysqli_fetch_assoc($queryeditora)){?>
 
-        <option value="<?php echo $editoras['Cod_editora'];?>"> <?php echo $editoras['Editora'];?> 
+        <option value="<?php echo $editoras['Cod_editora'];?>"> <?php echo $editoras['Nome_editora'];?> 
         </option><?php
 
        }
        ?>
-   
+  
 </select>
 
 <p><abel>Nome do Livro</label>

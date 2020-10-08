@@ -42,7 +42,7 @@ function cadastroCliente($conexao,$login,$senha){
     function cadastrarEditora($conexao ,$nome ,$contato ,$email, $telefone){
      
      
-         $sql = 'INSERT INTO editora ( Editora ,Contato, Email, Tel)';
+         $sql = 'INSERT INTO editora ( Nome_editora ,Contato, Email, Tel)';
          $sql .= " VALUES ('$nome','$contato','$email','$telefone')";
  
          //var_dump($sql);
@@ -109,7 +109,7 @@ function cadastroCliente($conexao,$login,$senha){
     //Function call list books
     function relatoriLivros($conexao)
     {
-        $buscarlivros = 'SELECT *  FROM livro_teste ORDER BY Cod_livro';
+        $buscarlivros = 'SELECT *  FROM livro ORDER BY Cod_livro';
         
         $resultado = mysqli_query($conexao, $buscarlivros);
        
@@ -123,7 +123,40 @@ function cadastroCliente($conexao,$login,$senha){
         return $livros;
     }
 
+    //Function call list books
+    function ConsultaUsuarios($conexao)
+    {
+        $buscarUsuarios = 'SELECT *  FROM cliente ORDER BY Nome';
+        
+        $resultado = mysqli_query($conexao, $buscarUsuarios);
+       
+        $usuarios = array();
+       
+        while ($user = mysqli_fetch_assoc($resultado)) {
+            
+            $usuarios[] = $user;
+        }
     
+        return $usuarios;
+    }
+
+    //Function call list books
+    function consultaAdministradores($conexao)
+    {
+        $buscarUsuarios = 'SELECT *  FROM usuario ORDER BY Nome';
+        
+        $resultado = mysqli_query($conexao, $buscarUsuarios);
+       
+        $usuarios = array();
+       
+        while ($user = mysqli_fetch_assoc($resultado)) {
+            
+            $usuarios[] = $user;
+        }
+    
+        return $usuarios;
+    }
+
     
 
 

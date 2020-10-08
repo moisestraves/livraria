@@ -38,7 +38,7 @@ if(isset($_POST['atualizar'])){
       
             //ATUALIZAR AQUI COM UMA MENSAGEM  UPDATE OK
 
-        header('location:painel_cliente.php');
+        header('location:painel-adm.php');
           
           
        
@@ -51,6 +51,9 @@ if(isset($_POST['atualizar'])){
   
 }
 
+
+
+?>
 
 
 ?>

@@ -19,6 +19,7 @@ if (!$_SESSION['Email']) {
 
 
 <div class="container">
+<h4 class="text-info mx-auto" style="width: 300px;">Relatórios de Livros </h4>
 <div class="table-responsive">
     <table class="table bordered table-hover table-sm table-dark">
     <thead class="thead-light ">

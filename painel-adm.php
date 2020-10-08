@@ -40,8 +40,8 @@ require 'adm/conexao.php';
 <h5>Relatórios</h5>
 <ul>
 <li><a href="consulta-cadastro-livros.php">Consulta de Livros</a></li>
-<li><a href="#">Consulta Clientes</a></li>
-<li><a href="#">Consulta  Usuários</a></li>
+<li><a href="listar-clientes.php">Consulta Clientes</a></li>
+<li><a href="consultar-usuarios-adm.php">Consulta  Usuários</a></li>
 </ul>  
 
 </div>
