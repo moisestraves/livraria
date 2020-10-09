@@ -45,7 +45,7 @@
          </li>
        
          <li class="nav-item">
-          <a class="nav-link text-white " href="#">PRODUTOS</a>
+          <a class="nav-link text-white " href="categorias.php">CATEGORIAS</a>
         </li>
        
         <li class="nav-item">
