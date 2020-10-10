@@ -5,7 +5,7 @@ require 'cabecadapagina.php';
 
 <div class="conteudocategoria">
 
-<h1> Livraria </h1>
+<h1 class="text-muted  "> Livraria </h1>
 
 <!-- Esta Div faz a formação do Layout-->
 <div id="categoriAdm">
@@ -17,7 +17,8 @@ require 'cabecadapagina.php';
  <p>R$ 50,00</p>
  <p> 3 X Sem Juros</p>
  <p>Cartão de Crédito</p>
- <button >Comprar</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
@@ -26,7 +27,8 @@ require 'cabecadapagina.php';
  <p>R$ 37,00</p>
  <p> 3 X Sem Juros</p>
  <p>Cartão de Crédito</p>
- <button >Comprar</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
@@ -36,7 +38,8 @@ require 'cabecadapagina.php';
  <p>R$ 30,00</p>
  <p> 3 X Sem Juros</p>
  <p>Cartão de Crédito</p>
- <button >Comprar</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
@@ -46,7 +49,8 @@ require 'cabecadapagina.php';
  <p>R$ 100,00</p>
  <p>5 X Sem Juros</p>
  <p>Cartão de Crédito</p>
- <button >Comprar</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
     
  <div>
@@ -56,13 +60,14 @@ require 'cabecadapagina.php';
  <p>R$ 150,00</p>
  <p>5 X Sem Juros</p>
  <p>Cartão de Crédito</p>
- <button >Comprar</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
     
   
 </div>
 <!--- INICIO DA CAIXA INFORMÁTICA-->
-<h1> Informática </h1>
+<h1 class="text-muted  " > Informática </h1>
 <div id="conteudoInfo">
 
 <div>
@@ -72,7 +77,8 @@ require 'cabecadapagina.php';
  <p>R$1.200,00</p>
  <p>10 X Sem Juros</p>
  <p>Cartão de Crédito</p>
- <button >Comprar</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  
@@ -84,7 +90,8 @@ require 'cabecadapagina.php';
     <p>R$ 30,00</p>
     <p>10 X Sem Juros</p>
     <p>Cartão de Crédito</p>
-    <button >Comprar</button>
+    
+    <a href="cliente-login.php"> <button>Comprar</button></a>
     </div>
     <!--FECHAMENTO DA IMAGEM-->
  <div>
@@ -94,7 +101,8 @@ require 'cabecadapagina.php';
  <p>10 X Sem Juros</p>
  <p>Cartão de Crédito</p>
 
- <button >Comprar</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 <!-- Fechamento da  div Informática-->
 </div>

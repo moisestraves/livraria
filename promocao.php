@@ -14,32 +14,37 @@ require 'cabecadapagina.php';
     
  <img src="IMG\biblia.jpg">
  
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
     
  <img src="IMG\capa-livro-Coragem-para-Viver-max-lucado.jpg">
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
  
  <img src="IMG\comofazeramigos.jpg">
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
 
  <img src="IMG\capa-livro-bookwire-.jpg">
- <button >COMPRAR</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
     
  <div>
  
  <img src="IMG\nadasera.jpg">
  
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
     
   
@@ -52,7 +57,8 @@ require 'cabecadapagina.php';
 <div>
 
  <img src="IMG\notebook.jpg">
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  
@@ -61,14 +67,16 @@ require 'cabecadapagina.php';
     
     
     <img src="IMG\Mochila.jpg">
-    <button >COMPRAR</button>
+    
+    <a href="cliente-login.php"> <button>Comprar</button></a>
     </div>
     <!--FECHAMENTO DA IMAGEM-->
  <div>
  
  <img src="IMG\NOBREAK.jpg">
  
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 <!-- Fechamento da  div Informática-->
 </div>

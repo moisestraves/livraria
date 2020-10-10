@@ -29,7 +29,7 @@ require 'cabecadapagina.php'
     <h5>Caminhos infinitos</h5>
     <p>R$ 80,00 </p>
     <p>3x sem juros no cartão</p>
-    <a href="cliente_login.php"><button type="submit" href="login.html">Comprar</button></a>
+    <a href="cliente-login.php"><button type="submit" href="login.html">Comprar</button></a>
   </div>
  </div>
 
@@ -41,7 +41,7 @@ require 'cabecadapagina.php'
     <p>R$ 40,00</p>
     <p>3 x sem juros no cartão</p>
     
-    <a href="cliente_login.php"> <button>Comprar</button></a>
+    <a href="cliente-login.php"> <button>Comprar</button></a>
   </div>
 
  </div>
@@ -54,7 +54,7 @@ require 'cabecadapagina.php'
     <p>3 x sem juros no cartão</p>
     
    
-    <a href="cliente_login.php"> <button>Comprar</button></a>
+    <a href="cliente-login.php"> <button>Comprar</button></a>
     
 
   </div>

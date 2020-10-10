@@ -15,7 +15,7 @@ require 'cabecadapagina.php';
  <img src="IMG\livro-vermelho.jpg">
  <p>R$10,00</p>
  <p>Livro  digital</p>
- <button >COMPRAR</button>
+  <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
@@ -23,7 +23,8 @@ require 'cabecadapagina.php';
  <img src="IMG\capa-livro-Coragem-para-Viver-max-lucado.jpg">
  <p>R$20,00</p>
  <p>Livro  digital</p>
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
@@ -31,7 +32,8 @@ require 'cabecadapagina.php';
  <img src="IMG\comofazeramigos.jpg">
  <p>R$15,00</p>
  <p>Livro  digital</p>
- <button>COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
 
  <div>
@@ -39,7 +41,8 @@ require 'cabecadapagina.php';
  <img src="IMG\capa-livro-bookwire-.jpg">
  <p>R$15,00</p>
  <p>Livro  digital</p>
-<button >COMPRAR</button>
+
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
     
  <div>
@@ -47,7 +50,8 @@ require 'cabecadapagina.php';
  <img src="IMG\nadasera.jpg">
  <p>R$15,00</p>
  <p>Livro  digital</p>
- <button >COMPRAR</button>
+ 
+ <a href="cliente-login.php"> <button>Comprar</button></a>
  </div>
     
   
