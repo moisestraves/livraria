@@ -519,24 +519,30 @@
     padding-top: 20px;
     background-color: rgba(255, 255, 255, 0.849);
     text-align: center;
-  
-    
+    text-transform: uppercase;
  
 
    }
 
-  #categoriAdm {
+  #categoriAdm  {
     display: flex;
     padding: 40px;
-    background-color: #F8F8FF ;   
+    background-color: #F8F8FF ;  
+    text-transform: uppercase; 
 }
-   
+
+#categoriAdm  p{
+  text-transform: uppercase;
+ padding: -0px;
+ font-size: 15px;
+ color: forestgreen;
+}
 #categoriAdm img {
-  border-radius: solid 20px;
+  border-radius: solid 50px;
   border-color: black;
-  padding: 5px;
-  width: 200px;
-  height: 250px;
+  padding: 20px;
+  width: 250px;
+  height: 300px;
 }
 #conteudoInfo{
   display: flex;
@@ -554,4 +560,9 @@
 #conteudoInfo p {
  text-transform: uppercase;
  padding: -0px;
+ font-size: 15px;
+ color: forestgreen;
+
 }
+
+

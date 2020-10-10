@@ -49,11 +49,11 @@
         </li>
        
         <li class="nav-item">
-          <a class="nav-link text-white " href="#">PROMOÇÕES</a>
+          <a class="nav-link text-white " href="promocao.php">PROMOÇÕES</a>
         </li>
        
         <li class="nav-item">
-          <a class="nav-link text-white " href="#">EBOOKS</a>
+          <a class="nav-link text-white " href="categoria-ebook.php">BOOKS</a>
         </li>
         
         <li class="nav-item">

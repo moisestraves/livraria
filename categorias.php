@@ -30,11 +30,31 @@ require 'cabecadapagina.php';
  </div>
 
  <div>
- <h5> Sejá Foda !</h5>
- <img src="IMG\sejafoda.jpg">
+ <h5>Como fazer Amigos</h5>
+ <img src="IMG\comofazeramigos.jpg">
  
  <p>R$ 30,00</p>
  <p> 3 X Sem Juros</p>
+ <p>Cartão de Crédito</p>
+ <button >Comprar</button>
+ </div>
+
+ <div>
+ <h5>Esclada de Sucesso</h5>
+ <img src="IMG\capa-livro-bookwire-.jpg">
+ 
+ <p>R$ 100,00</p>
+ <p>5 X Sem Juros</p>
+ <p>Cartão de Crédito</p>
+ <button >Comprar</button>
+ </div>
+    
+ <div>
+ <h5>Nada será como Antes</h5>
+ <img src="IMG\nadasera.jpg">
+ 
+ <p>R$ 150,00</p>
+ <p>5 X Sem Juros</p>
  <p>Cartão de Crédito</p>
  <button >Comprar</button>
  </div>
