@@ -106,8 +106,10 @@ function cadastroCliente($conexao,$login,$senha){
             header('location:cliente.logar.php?acessonegado');
         }
     }
-    //Function call list books
-    function relatoriLivros($conexao)
+   
+
+    //Function call list books para vendas
+    function consultaLivrosPortal($conexao)
     {
         $buscarlivros = 'SELECT *  FROM livro ORDER BY Cod_livro';
         

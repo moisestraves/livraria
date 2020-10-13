@@ -59,7 +59,7 @@ if (!$_SESSION['Email']) {
     <td><?=$user['Bairro']; ?> </td>
     <td><?=$user['Estado']; ?> </td>
     
-    <td> <a href="atualizar-info-painel-adm.php?id=<?=$user['Cod_cliente']; ?>"> Editar </td>
+    <td> <a href="atualizar-info-painel-adm.php?id=<?=$user['Cod_cliente']; ?>"> Editar</a> </td>
     <td> <a href="excluir-user-adm.php?id=<?=$user['Cod_cliente']; ?>"> Excluir<!--<img src="IMG/lapis.png" width="5%">--></a> </td>
     </tr>
     <?php
