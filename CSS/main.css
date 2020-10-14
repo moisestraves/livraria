@@ -152,14 +152,22 @@
    footer p{
      text-align: center;
      font-size: small;
-    
+     text-decoration: none;
    }
+
+
 
     /*SEMPRE USAR PARA FIXAR RODAPÉ*/
     .rodape {
       flex-shrink: 0;
     }
 
+    .rodape a {
+
+      text-decoration: none;
+    color:white;
+   
+    }
    #alinharCadastro{
 
     display: inline-flex;

@@ -27,7 +27,7 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
       </div>
       </div>
   </div>
-   <h1> Produtos </h1>
+   <h3 class ="text-center"> Produtos </h3>
    
    <!--Aqui Estou usando o foraeach para listar os livros -->
   <?php foreach ($livros as $livrobase){
@@ -35,17 +35,17 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
       
     //print_r($livrobase['Nome_livro']);
   ?>
-
-    <div class="row ">
+    <!-- Aqui alinhando ao centro as imagens -->
+    <div class="row d-flex justify-content-center">
 
   
-   <div  class="img-thumbnail text-center ">
+   <div  class="img-thumbnail text-center  ">
 
-    <p><img src="IMG\biblia.jpg" alt="Biblia Sagrada Capa Leão " width="30%"></p>
+    <p><img src="IMG\biblia.jpg" alt="Biblia Sagrada Capa Leão " width="40%"></p>
 
     <div class="caption text-center">
     <p><h5> <?php echo $livrobase['Nome_livro'];?> </h5></p>
-    <p><h5>  <?php echo 'Autor', $livrobase['Autor'];?> </h5></p>
+    <p><h5>  <?php echo 'Autor :', $livrobase['Autor'];?> </h5></p>
     <p><a href="detalhes.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Comprar</a></p>
    
   
@@ -53,8 +53,9 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
      </div>
      
      <?php } ?>
+     
      </div> 
-
+    
 <?php
 require 'rodape.php';
 ?>

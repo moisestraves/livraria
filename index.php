@@ -1,5 +1,5 @@
 <?php 
-require 'cabecadapagina.php'
+require 'cabecadapagina.php';
 ?>
   <!--Banner Principal do site Slider-->
 
