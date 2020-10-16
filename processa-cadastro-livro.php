@@ -1,5 +1,5 @@
 <?php
-
+require 'cabecaarea-admin.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
@@ -33,7 +33,10 @@ $cad_livro =cadastrarLivro($conexao,$nome_editora,$codigo_estoque,$nome_livro,$a
 if($cad_livro == 1){
 
     
-    echo "Cadastro efetuado com Sucesso !";
+    echo "<div class='alert alert-success' role='alert'>
+    <h5 class='text-center'>Livro Cadastrado com Sucesso !</h5>";
+
+    
 }else{
 
     echo "Erro";

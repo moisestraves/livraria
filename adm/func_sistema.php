@@ -144,6 +144,20 @@ function cadastroCliente($conexao,$login,$senha){
     }
 
     
+     function excluirLivro ($conexao,$codigo){
+     
+
+    $queryDelte = "DELETE FROM livro  WHERE  Cod_livro = '$codigo' LIMIT = 1";
+
+    $resultado = mysqli_query($conexao,$queryDelte);
+        var_dump($resultado);
+   
+
+     
+        
+
+ }
+    
 
 
     ?>

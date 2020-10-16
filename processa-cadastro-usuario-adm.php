@@ -1,5 +1,5 @@
 <?php
-
+require 'cabecaarea-admin.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
@@ -25,12 +25,16 @@ $restuladoInsertUsuario=cadastrousuario($conexao,$nome,$cargo,$perfil,$departame
   
 if($restuladoInsertUsuario== 1){
 
+    echo "<div class='alert alert-success' role='alert'>
+    <h5 class='text-center'>Usuário Cadastrado com Sucesso !</h5>";
    
-    header('location:painel-adm.php');
+   
 }else {
 
-    echo '<br><br>NÃO FOI POSSIVEL CADASTRAR O USUÁRIO <br> <br>ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA !';
-    echo '<br> <a href="painel-adm.php>Clique aqui </a>';
+    echo "<div class='alert alert-danger' role='alert'>
+    <h5 class='text-center'><br><br>NÃO FOI POSSIVEL CADASTRAR O USUÁRIO <br> <br>ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA !</h5>";
+   
+    
     
 
     
@@ -41,7 +45,7 @@ if($restuladoInsertUsuario== 1){
 
 
 
-
+require 'rodape.php';
 
  
 

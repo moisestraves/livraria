@@ -5,11 +5,11 @@ session_start();
  require 'adm/conexao.php';
  require 'adm/func_sistema.php';
 
-
+   
     // AQUI FOI RECEBIDO OS DADOS PARA UPDATE
     $id_livro = $_POST['id'] ;
     $nome = $_POST['nomelivro'];
-    $autor =$_POST´['nomeautor'];
+    $autor =$_POST['nomeautor'];
     $preco =$_POST['preco'];
     $categoria =$_POST['categoria'];
     $anopubli = $_POST['ano'];
@@ -17,7 +17,7 @@ session_start();
   // var_dump($id_livro);
 
     
-    $selecionardados = "UPDATE  livro_teste  SET Nome_livro ='$nome', Autor='$autor' where Cod_livro ='$id_livro'"; // select *from config
+    $selecionardados = "UPDATE  livro  SET Nome_livro ='$nome', Autor='$autor' where Cod_livro ='$id_livro'"; // select *from config
     $resultado = mysqli_query($conexao, $selecionardados);
 
 
