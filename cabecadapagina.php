@@ -41,7 +41,7 @@
           <ul class="nav justify-content-center">
           
             <li class="nav-item">
-             <a class="nav-link text-white  active" href="#">LIVROS</a>
+             <!--<a class="nav-link text-white  active" href="#">LIVROS</a>-->
          </li>
        
          <li class="nav-item">
@@ -53,7 +53,7 @@
         </li>
        
         <li class="nav-item">
-          <a class="nav-link text-white " href="categoria-ebook.php">BOOKS</a>
+          <a class="nav-link text-white " href="categoria-ebook.php">EBOOKS</a>
         </li>
         
         <li class="nav-item">

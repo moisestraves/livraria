@@ -16,7 +16,7 @@ session_start();
    //var_dump($id_livro);
 
     
-    $selecionardados = "SELECT * FROM livro_teste where Cod_livro ='$id_livro'"; // select *from config
+    $selecionardados = "SELECT * FROM livro where Cod_livro ='$id_livro'"; // select *from config
     $resultadousuario = mysqli_query($conexao, $selecionardados);
 
 // Leitura do parâmetro selecionado no banco de dados para edição
@@ -50,16 +50,16 @@ var_dump($resultado);*/
     <!-- Aqui foi inserido um select , para buscas os nomes das editoras no banco-->  
  <p>
 <select class="form-control form-control-sm" name="select_editora">
-    <option>Editora</option>
+    <option>Editora
     <?php
-       $sqleditora = "SELECT Cod_editora , Editora  FROM editora";
+       $sqleditora = "SELECT *  FROM editora";
        $queryeditora = mysqli_query($conexao,$sqleditora);
    
       // $editora = array();
    
        while($editoras = mysqli_fetch_assoc($queryeditora)){?>
 
-        <option value="<?php echo $editoras['Cod_editora'];?>"> <?php echo $editoras['Editora'];?> 
+        <option value="<?php echo $editoras['Cod_editora'];?>"> <?php echo $editoras['Nome_editora'];?> 
         </option><?php
 
        }
@@ -97,6 +97,7 @@ var_dump($resultado);*/
 </p>
  
 <p><button type="submit" class="btn btn-dark" > Salvar </button></p>
+
 
 </form>
 </div>

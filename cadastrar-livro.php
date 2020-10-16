@@ -27,7 +27,7 @@ require 'adm/conexao.php';
     <!-- Aqui foi inserido um select , para buscas os nomes das editoras no banco-->  
  <p>
 <select class="form-control form-control-sm" name="select_editora">
-<option>EDITORA   </option> 
+<option>Escolha o Nome da Editora   </option> 
     <?php
        $sqleditora = "SELECT Cod_editora , Nome_editora  FROM editora";
        $queryeditora = mysqli_query($conexao,$sqleditora);
@@ -44,7 +44,24 @@ require 'adm/conexao.php';
        ?>
   
 </select>
+<p><select class="form-control form-control-sm" name="select_estoque">
+<option>Codigo  Estoque  </option> 
+    <?php
+       $sqlestoque = "SELECT * FROM estoque";
+       $queryestoque = mysqli_query($conexao,$sqlestoque);
+   
+       print_r($queryestoque);
+      //$editora = array();
+   
+       while($estoque = mysqli_fetch_assoc($queryestoque)){?>
 
+        <option value="<?php echo $estoque['Cod_livro'];?>"> <?php echo $estoque['Cod_livro'];?> 
+        </option></p><?php
+    
+       }
+       ?>
+  
+</select>
 <p><abel>Nome do Livro</label>
 <input type="text"  class="form-control form-control-sm" name="nomelivro" placeholder="Livro" required></p>
     

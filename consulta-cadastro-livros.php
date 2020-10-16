@@ -38,7 +38,7 @@ if (!$_SESSION['Email']) {
     </tr>
     </thead>
 
-    <?php  $relatorioLivros =relatoriLivros($conexao);
+    <?php  $relatorioLivros =consultaLivrosPortal($conexao);
     
     foreach ($relatorioLivros as $livro){
 
@@ -53,7 +53,7 @@ if (!$_SESSION['Email']) {
     <td><?=$livro['Categoria']; ?></td>
     <td><?=$livro['Ano']; ?></td>
     <td> <a href="editar-livro.php?id=<?=$livro['Cod_livro']; ?>"> Editar </td>
-    <td> <a href="#"> Excluir<!--<img src="IMG/lapis.png" width="5%">--></a> </td>
+    <td> <a href="excluir.php?id=<?=$livro['Cod_livro']; ?>"> Excluir<!--<img src="IMG/lapis.png" width="5%">--></a> </td>
     </tr>
     <?php
     } ?>

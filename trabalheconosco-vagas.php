@@ -5,6 +5,7 @@ require 'adm/conexao.php';
 
 
 <p class="h1 text-center text-capitalize">Trabalhe Conosco </p>
+
 <p class="text-center text-capitalize">Vagas</p>
 <p class="text-center text-capitalize" >Representante Comercial local: Loja Vila da Sorte</p>
 <p class="text-center text-capitalize">local: Loja Vila da Sorte</p>
