@@ -109,6 +109,28 @@ function cadastroCliente($conexao,$login,$senha){
         return $livros;
     }
 
+    //Function select produto para comprar Livro
+    function consultaComprar($conexao,$CodigoProduto)
+    {
+        $buscarlivros = "SELECT *  FROM livro  where Cod_livro =('$CodigoProduto')";
+        
+        $resultado = mysqli_query($conexao, $buscarlivros);
+       
+        $livros = array();
+       
+        while ($livro = mysqli_fetch_assoc($resultado)) {
+            
+            $livros[] = $livro;
+        }
+    
+        return $livros;
+    }
+
+
+
+
+
+
     //Function call list user
     function ConsultaUsuarios($conexao)
     {

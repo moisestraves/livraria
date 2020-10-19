@@ -4,7 +4,7 @@ require 'adm/conexao.php';
 
 
 //Aqui é selecionado todos os livros na base para Publicar na loja
-$querLivros = 'SELECT * FROM livro_teste  ORDER BY Nome_livro ';
+$querLivros = 'SELECT * FROM livro ORDER BY Nome_livro ';
 $resultado =mysqli_query($conexao,$querLivros);
 
 
@@ -17,7 +17,7 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 ?>
   <!--Banner Principal do site Slider-->
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="IMG/capa.png" alt="CAPA DO SITE">
@@ -26,35 +26,31 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
         <img class="d-block w-100" src="IMG/bannerLivroColorido.png" alt="Livros coloridos imagem ">
       </div>
       </div>
-  </div>
-   <h3 class ="text-center"> Produtos </h3>
-   
-   <!--Aqui Estou usando o foraeach para listar os livros -->
-  <?php foreach ($livros as $livrobase){
+  </div>-->
+    
+<!--Corpo da Estrutura dos pagina inicial dos livros-->
 
-      
-    //print_r($livrobase['Nome_livro']);
+<h5 class="text-center">Livros</h5>
+
+<?php foreach ($livros as $livrobase){
   ?>
-    <!-- Aqui alinhando ao centro as imagens -->
-    <div class="row d-flex justify-content-center">
+<div class="container">
+<div class="produtos">
 
-  
-   <div  class="img-thumbnail text-center  ">
 
-    <p><img src="IMG\biblia.jpg" alt="Biblia Sagrada Capa Leão " width="40%"></p>
+<!--<img src="IMG/caminhos-infindos.jpg">-->
+<div class="caption text-center"> 
+<p><h5><?php echo $livrobase['Nome_livro'];?></h5></p> 
 
-    <div class="caption text-center">
-    <p><h5> <?php echo $livrobase['Nome_livro'];?> </h5></p>
-    <p><h5>  <?php echo 'Autor :', $livrobase['Autor'];?> </h5></p>
-    <p><a href="detalhes.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Comprar</a></p>
-   
-  
-    </div>
-     </div>
-     
-     <?php } ?>
-     
-     </div> 
+<p><h5><?php echo 'RS :', $livrobase['Preco'];?></h5></p>
+<p>
+<p><a href="checkout.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn btn-primary btn-sm  active text-center" role="button" aria-pressed="true">Comprar</a></p>
+
+</div>
+<?php } ?>
+
+</div>
+</div>
     
 <?php
 require 'rodape.php';

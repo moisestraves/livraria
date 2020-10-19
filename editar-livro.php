@@ -16,7 +16,7 @@ session_start();
    //var_dump($id_livro);
 
     
-    $selecionardados = "SELECT * FROM livro where Cod_livro ='$id_livro'"; // select *from config
+    $selecionardados = "SELECT * FROM livro where Cod_livro ='$id_livro'"; 
     $resultadousuario = mysqli_query($conexao, $selecionardados);
 
 // Leitura do parâmetro selecionado no banco de dados para edição
@@ -26,7 +26,7 @@ $resultado = mysqli_fetch_assoc($resultadousuario);
 var_dump($resultado);*/
 
 
-   // var_dump($id_cliente);
+   // var_dump($id_livro);
 
     
 

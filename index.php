@@ -1,5 +1,6 @@
 <?php 
 require 'cabecadapagina.php';
+require 'adm/conexao.php';
 ?>
   <!--Banner Principal do site Slider-->
 
@@ -15,54 +16,45 @@ require 'cabecadapagina.php';
   </div>
    
   
- 
+  <?php 
+
+
+//Aqui é selecionado todos os livros na base para Publicar na loja
+$querLivros = 'SELECT * FROM livro ORDER BY Nome_livro ';
+$resultado =mysqli_query($conexao,$querLivros);
+
+
+$livros = array();
+       
+while ($livro = mysqli_fetch_assoc($resultado)) {
+    
+    $livros[] = $livro;
+}
+?>
   
 <!--Corpo da Estrutura dos pagina inicial dos livros-->
 
-<aside>
-<div id="livros">
-<div>
-  <img src="IMG/caminhos-infindos.jpg">
-  
-  <div class="botao-comprar">
-   
-    <h5>Caminhos infinitos</h5>
-    <p>R$ 80,00 </p>
-    <p>3x sem juros no cartão</p>
-    <a href="cliente-login.php"><button type="submit" href="login.html">Comprar</button></a>
-  </div>
- </div>
+<h5 class="text-center">Produtos</h5>
 
- <div>
-  <img src="IMG/capa-livro-bookwire-.jpg">
+<?php foreach ($livros as $livrobase){
+  ?>
+<div class="container">
+<div class="produtos">
 
-  <div class="botao-comprar">
-    <h5>Escalada do Sucesso</h5>
-    <p>R$ 40,00</p>
-    <p>3 x sem juros no cartão</p>
-    
-    <a href="cliente-login.php"> <button>Comprar</button></a>
-  </div>
 
- </div>
 
- <div>
-  <img src="IMG/capa-livro-bookwire-.jpg">
-  <div class="botao-comprar">
-    <h5>Escalada do Sucesso</h5>
-    <p>R$ 40,00</p>
-    <p>3 x sem juros no cartão</p>
-    
-   
-    <a href="cliente-login.php"> <button>Comprar</button></a>
-    
+<div class="caption text-center"> 
+<p><img src="IMG/caminhos-infindos.jpg  "  ></p>
+<p><h5><?php echo $livrobase['Nome_livro'];?></h5></p> 
 
-  </div>
+<p><h5><?php echo 'RS :', $livrobase['Preco'];?></h5></p>
+
+<p><a href="checkout.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn btn-primary btn-sm  active text-center" role="button" aria-pressed="true">Comprar</a></p>
+
 </div>
-</aside>
-  
+<?php } ?>
 
- </div>
+</div>
 </div>
 <?php
 require 'rodape.php';

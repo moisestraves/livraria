@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="CSS/main.css">
+<link rel="stylesheet" type="text/css" href="CSS/mobile.css">
 
 </head>
 <!--DiviGeral Corpo-->
@@ -27,7 +28,7 @@
 <!--Caixa de Pesquisa do topo de produtos fixo no topo centralizado-->
   <div id="caixa-top">
 
-  <input  type="search" name='q'id="txtBusca" placeholder="PESQUISAR" >
+  <input  type="search" name='q'id="q" placeholder="PESQUISAR" >
   
 </div> 
 <!--Configurações e  Opçãoes do Carrinho de Compras-->
@@ -41,7 +42,7 @@
           <ul class="nav justify-content-center">
           
             <li class="nav-item">
-             <!--<a class="nav-link text-white  active" href="#">LIVROS</a>-->
+             <a class="nav-link text-white  active" href="loja.php">LIVROS</a>
          </li>
        
          <li class="nav-item">
@@ -64,3 +65,5 @@
           </li>
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
+
+

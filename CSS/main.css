@@ -8,7 +8,7 @@
    
    html, body{
     height: 100%;
-    margin: 0px 0px;
+    margin: 0 auto;
     padding: 0px;
    }
    body{
@@ -369,13 +369,14 @@
    }
 
    /*AQUI É O CORPO DE TODA CONFIGURAÇÃO RESPONSIVA DO SITE*/
-       @media  screen and (max-width: 300px) {
+       @media   (max-width: 600px) {
     
              #caixa-top input{
-              display: flex;      
+              display: inline-block;      
               width: auto;      
      
    }
+   
           h1{
 
              width: auto;
@@ -406,7 +407,7 @@
     .botao-comprar p{
       font-size: 5;
       height: 3px ;
-      
+     
     }
     /*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
     .botao-comprar button{
@@ -573,4 +574,37 @@
 
 }
 
+/*Formatação geral das Caixa dos produtos*/
+.produtos{
 
+  background-color: #FFFFFF;
+  display: flex;
+  padding-top: 20px 0px;
+  border-radius: black 2px;
+  
+
+}
+.produtos h5{
+
+  font-size: 16px;
+  width: 120; 
+  height: 60px;;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 5px;
+ 
+ 
+}
+.produtos a {
+
+  padding-left: 150px;
+
+ text-align: center;
+
+}
+
+
+.produtos img{
+  padding: 10px;
+  width:150px;
+  height: 200px;
+}
