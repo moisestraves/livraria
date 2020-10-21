@@ -49,7 +49,7 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 
 <p><h5><?php echo 'RS :', $livrobase['Preco'];?></h5></p>
 
-<p><a href="checkout.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn btn-primary btn-sm  active text-center" role="button" aria-pressed="true">Comprar</a></p>
+<p><a href="checkout.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Comprar</a></p>
 
 </div>
 <?php } ?>

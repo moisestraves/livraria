@@ -72,6 +72,31 @@ function cadastroCliente($conexao,$login,$senha){
 
     }
 
+
+    //FUNÇÃO DE TRATAMENTO DO ARQUIVO DO ANEXO
+
+    function validarFormatoArquivo($arquivo){
+
+        $padraoArquivo =  '/^.+(\.jpg|\.png)$/'; //Aqui é verificado o tipo de arquivo válido
+        $resultado = preg_match($padraoArquivo,$arquivo['nome']);
+
+       // var_dump($arquivo);
+        if(! $resultado){
+            
+          
+            return false;
+
+        }
+        move_uploaded_file($arquivo['tmp_name'],"capas/{$arquivo['nome']}");
+      
+            echo "teste";
+        return true;
+            
+    } 
+
+    
+
+
         //Função que consulta o pedido
          function conPedido($conexao,$pedido){
 

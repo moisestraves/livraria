@@ -29,7 +29,7 @@ require 'adm/conexao.php';
 <li><a href="cadastro-usuario-sistema.php">Cadastro de usuário</a></li>
 <li><a href="cadastrar-editora.php">Cadastrar Editora</a></li>
 <li><a href="cadastrar-livro.php">Cadastrar Livro</a></li>
-<li><a href="#">Cadastrar categorias</a></li>
+<li><a href="carregar-capa.php">Capa do Livro</a></li>
 
 </ul>
 </div>
