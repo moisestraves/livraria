@@ -55,7 +55,7 @@ if (!$_SESSION['Email']) {
 ?>
 <div class="container">
 <h3> Detalhes do Pedido</h3>
-<form action="" method="POST">
+<form action="carrinho.php" method="POST">
 <table>
     <h5>Intens do Pedido</h5>
     <th>Titulo</th> <td><?=$gerarpedido['Nome_livro'];?></td>
