@@ -1,113 +1,80 @@
 
 <?php
 require 'cabecadapagina.php';
+require 'adm/conexao.php';
+
+require 'adm/func_sistema.php';
 ?>
 
-<div class="conteudocategoria">
 
-<h1 class="text-muted  "> Livraria </h1>
+
+
 
 <!-- Esta Div faz a formação do Layout-->
-<div id="categoriAdm">
+<?php 
 
 
-    <div>
-    <h5>Biblia Sagrada</h5>
- <img src="IMG\biblia.jpg">
- <p>R$ 50,00</p>
- <p> 3 X Sem Juros</p>
- <p>Cartão de Crédito</p>
- 
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
+//Aqui é selecionado todos os livros na base para Publicar na loja
+$querLivros = 'SELECT * FROM livro ORDER BY Nome_livro ';
+$resultado =mysqli_query($conexao,$querLivros);
 
- <div>
-    <h5>Coragem para Viver</h5>
- <img src="IMG\capa-livro-Coragem-para-Viver-max-lucado.jpg">
- <p>R$ 37,00</p>
- <p> 3 X Sem Juros</p>
- <p>Cartão de Crédito</p>
 
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
-
- <div>
- <h5>Como fazer Amigos</h5>
- <img src="IMG\comofazeramigos.jpg">
- 
- <p>R$ 30,00</p>
- <p> 3 X Sem Juros</p>
- <p>Cartão de Crédito</p>
-
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
-
- <div>
- <h5>Esclada de Sucesso</h5>
- <img src="IMG\capa-livro-bookwire-.jpg">
- 
- <p>R$ 100,00</p>
- <p>5 X Sem Juros</p>
- <p>Cartão de Crédito</p>
-
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
+$livros = array();
+       
+while ($livro = mysqli_fetch_assoc($resultado)) {
     
- <div>
- <h5>Nada será como Antes</h5>
- <img src="IMG\nadasera.jpg">
- 
- <p>R$ 150,00</p>
- <p>5 X Sem Juros</p>
- <p>Cartão de Crédito</p>
- 
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
-    
+    $livros[] = $livro;
+}
+
+
+?>
   
+<!--Corpo da Estrutura dos pagina inicial dos livros-->
+
+<h4 class="text-center">Livraria</h4>
+
+<?php foreach ($livros as $livrobase){
+  ?>
+<div class="container">
+<div class="produtos">
+
+
+
+<div class="caption text-center"> 
+
+<p><h5><?php echo $livrobase['Nome_livro'];?></h5></p> 
+
+<?php $id_livro = $livrobase['Cod_livro'];
+//var_dump ($id_livro);
+
+$capa = listarCapa($conexao,$id_livro);
+
+
+
+/* AQUI ESTE PRINT ESTA TESTANDO OS DADOS DO ARRAY 
+print_r($capa);*/
+?>
+
+<!-- AQUI O FOREACH DA LEITURA DAS CAPAS DOS LIVROS-->
+<?php foreach ($capa as $totalcapas)?>
+
+<img src="capas/<?=$totalcapas['nome_imagem'] ?>" alt="Destaque" class="foto">
+
+<!--LFORMATAÇÃO EM MOEDA  number_format( $livrobase['Preco'],2,',','.');?>-->
+
+<h6><?php echo 'Código -',$livrobase['Cod_livro'];?></h6></p> 
+<p><h5><?php echo 'R$ ', number_format( $livrobase['Preco'],2,',','.');?></h5></p>
+
+<!-- Botão  que vai direciona para página de checkout -->
+<p><a href="checkout.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Comprar</a></p>
+
 </div>
-<!--- INICIO DA CAIXA INFORMÁTICA-->
-<h1 class="text-muted  " > Informática </h1>
-<div id="conteudoInfo">
 
-<div>
-<div>
- <h5>Notebook Lenovo Ipad 330</h5>
- <img src="IMG\notebook.jpg">
- <p>R$1.200,00</p>
- <p>10 X Sem Juros</p>
- <p>Cartão de Crédito</p>
+<?php } ?>
 
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
-
- 
 </div>
-    <div>
-    
-    <h5>Mochila para Notebook</h5>
-    <img src="IMG\Mochila.jpg">
-    <p>R$ 30,00</p>
-    <p>10 X Sem Juros</p>
-    <p>Cartão de Crédito</p>
-    
-    <a href="cliente-login.php"> <button>Comprar</button></a>
-    </div>
-    <!--FECHAMENTO DA IMAGEM-->
- <div>
- <h5>Nobreak</h5>
- <img src="IMG\NOBREAK.jpg">
- <p>R$200,00</p>
- <p>10 X Sem Juros</p>
- <p>Cartão de Crédito</p>
-
-
- <a href="cliente-login.php"> <button>Comprar</button></a>
- </div>
-<!-- Fechamento da  div Informática-->
 </div>
-<!--Aqui é o fechamento da divi principal-->
-</div>
+<hr>
 
 
 <?php

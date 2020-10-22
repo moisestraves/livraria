@@ -27,8 +27,8 @@ if (!$_SESSION['Email']) {
 ?>   
    
 <div class="container">
-<h4 class="text-info mx-auto" style="width: 300px;">Intem escolhido </h4>
-<div class="table-responsive">
+<h4 class="text-info mx-auto" style="width: 300px;">Intem</h4>
+<div class="table-responsive ">
     <table class="table bordered table-hover table-sm table-dark">
     <thead class="thead-light ">
     <tr>
@@ -55,10 +55,10 @@ if (!$_SESSION['Email']) {
     
     <td><?=$livro['Nome_livro']; ?></td>
     <td><?=$livro['Autor']; ?> </td>
-    <td><?=$livro ['Preco']; ?></td>
+    <td><?= number_format($livro ['Preco'],2,',','.'); ?></td>
     <td><?=$livro['Categoria']; ?></td>
     <td><?=$livro['Ano']; ?></td>
-    
+   
      
     </tr>
     <?php

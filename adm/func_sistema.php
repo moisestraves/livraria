@@ -94,7 +94,22 @@ function cadastroCliente($conexao,$login,$senha){
             
     } 
 
+    //Função do  lista a capa do livro
+    function listarCapa($conexao,$id_capa){
+        
+        $sql = "SELECT nome_imagem  FROM capa_livro Where livro_cod_livro =('$id_capa')";
+
+        $resultado = mysqli_query($conexao,$sql);
+        
+        $capaLivros = array();
+       
+        while ($livroCapa = mysqli_fetch_assoc($resultado)) {
+            
+            $capaLivros[] = $livroCapa;
+        }
     
+        return($capaLivros);
+    }
 
 
         //Função que consulta o pedido

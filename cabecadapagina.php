@@ -21,24 +21,24 @@
     <div id="container">
     
     <div id="logo-top">
-<h1><a href="index.php"> On Livraria Brasil</a></h1>
+    <h1><a href="index.php"> On Livraria Brasil</a></h1>
 
-</div>
+    </div>
 
-<!--Caixa de Pesquisa do topo de produtos fixo no topo centralizado-->
-  <div id="caixa-top">
+    <!--Caixa de Pesquisa do topo de produtos fixo no topo centralizado-->
+    <div id="caixa-top">
 
-  <input  type="search" name='q'id="q" placeholder="PESQUISAR" >
+   <input  type="search" name='q'id="q" placeholder="PESQUISAR" >
   
-</div> 
-<!--Configurações e  Opçãoes do Carrinho de Compras-->
-<div class="carrinho">
+   </div> 
+   <!--Configurações e  Opçãoes do Carrinho de Compras-->
+   <div class="carrinho">
         <h5>Loja Carrinho <svg width="1em" height="2em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
         </svg></h5>
-</div>
-    <!--Configuração do topo da página local do menu principal da página-->
-      <div id="nav">
+       </div>
+       <!--Configuração do topo da página local do menu principal da página-->
+       <div id="nav">
           <ul class="nav justify-content-center">
           
             <li class="nav-item">
@@ -47,23 +47,23 @@
        
          <li class="nav-item">
           <a class="nav-link text-white " href="categorias.php">CATEGORIAS</a>
-        </li>
+         </li>
        
-        <li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link text-white " href="promocao.php">PROMOÇÕES</a>
-        </li>
+         </li>
        
-        <li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link text-white " href="categoria-ebook.php">EBOOKS</a>
-        </li>
+         </li>
         
-        <li class="nav-item">
+           <li class="nav-item">
             <a class="nav-link text-white " href="#">LANÇAMENTOS</a>
-          </li>
+           </li>
           <li class="nav-item">
             <a class="nav-link text-white " href="cliente-login.php">ENTRE OU CADASTRE-SE</a>
           </li>
 </ul>
 </div> <!--FINAL DO MENU PRINCIPAL DO SITE-->
-
+    </div>
 

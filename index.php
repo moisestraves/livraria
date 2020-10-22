@@ -1,6 +1,8 @@
 <?php 
 require 'cabecadapagina.php';
 require 'adm/conexao.php';
+
+require 'adm/func_sistema.php';
 ?>
   <!--Banner Principal do site Slider-->
 
@@ -15,7 +17,7 @@ require 'adm/conexao.php';
       </div>
   </div>
    
-  
+
   <?php 
 
 
@@ -30,6 +32,8 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
     
     $livros[] = $livro;
 }
+
+
 ?>
   
 <!--Corpo da Estrutura dos pagina inicial dos livros-->
@@ -44,14 +48,35 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 
 
 <div class="caption text-center"> 
-<p><img src="IMG/caminhos-infindos.jpg  "  ></p>
+
 <p><h5><?php echo $livrobase['Nome_livro'];?></h5></p> 
 
-<p><h5><?php echo 'RS :', $livrobase['Preco'];?></h5></p>
+<?php $id_livro = $livrobase['Cod_livro'];
+//var_dump ($id_livro);
 
+$capa = listarCapa($conexao,$id_livro);
+
+
+
+/* AQUI ESTE PRINT ESTA TESTANDO OS DADOS DO ARRAY 
+print_r($capa);*/
+?>
+
+<!-- AQUI O FOREACH DA LEITURA DAS CAPAS DOS LIVROS-->
+<?php foreach ($capa as $totalcapas)?>
+
+<img src="capas/<?=$totalcapas['nome_imagem'] ?>" alt="Destaque" class="foto">
+
+<!--FORMATAÇÃO EM MOEDA -->
+
+<h6><?php echo 'Código -',$livrobase['Cod_livro'];?></h6></p> 
+<p><h5><?php echo 'R$ ', number_format( $livrobase['Preco'],2,',','.');?></h5></p>
+
+<!-- Botão  que vai direciona para página de checkout -->
 <p><a href="checkout.php?id=<?=$livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Comprar</a></p>
 
 </div>
+
 <?php } ?>
 
 </div>
