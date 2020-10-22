@@ -20,14 +20,14 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 
 ?>
   
-<!--Corpo da Estrutura dos pagina inicial dos livros-->
+  <!--Corpo da Estrutura dos pagina inicial dos livros-->
 
 <h5 class="text-center">Produtos</h5>
 
 <?php foreach ($livros as $livrobase){
   ?>
-<div class="container">
-<div class="produtos">
+  <div class="container">
+  <div class="produtos">
 
 
 
@@ -36,14 +36,14 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 <p><h5><?php echo $livrobase['Nome_livro'];?></h5></p> 
 
 <?php $id_livro = $livrobase['Cod_livro'];
+
 //var_dump ($id_livro);
 
 $capa = listarCapa($conexao,$id_livro);
 
 
 
-/* AQUI ESTE PRINT ESTA TESTANDO OS DADOS DO ARRAY 
-print_r($capa);*/
+
 ?>
 
 <!-- AQUI O FOREACH DA LEITURA DAS CAPAS DOS LIVROS-->

@@ -64,6 +64,9 @@ if (!$_SESSION['Email']) {
     <?php
     } ?>
     </table>
+
+    <p><a href="detalhes.php?id=<?= $livro['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Comprar</a></p>
+
 </div>
 </div>
 
