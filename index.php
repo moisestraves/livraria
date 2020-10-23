@@ -37,8 +37,8 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 ?>
 
 <!--Corpo da Estrutura dos pagina inicial dos livros-->
-
-<h5 class="text-center">Produtos</h5>
+<hr>
+<h5 class="text-center text-uppercase ">Produtos</h5>
 
 <?php foreach ($livros as $livrobase) {
 ?>

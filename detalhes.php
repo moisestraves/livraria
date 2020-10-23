@@ -4,13 +4,12 @@ session_start();
 require 'verificar-pedido.php';   
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
- 
+
+
 $id_livro = $_GET['id'] ;
 
-
-
-
-
+// Chamada da função que lista os livros Aqui ela vai mostrar o livro selecionado para compra    
+$capa = listarCapa($conexao, $id_livro);
 
 $compra = "SELECT * from  livro where  Cod_livro =('$id_livro')";
 
@@ -50,21 +49,28 @@ if (!$_SESSION['Email']) {
 }*/
 
 
-    
 
 ?>
 <div class="container">
-<h3> Detalhes do Pedido</h3>
+<h3 class="text-center"> Detalhes do Pedido</h3>
 <form action="carrinho.php" method="POST">
 <table>
-    <h5>Intens do Pedido</h5>
-    <th>Titulo</th> <td><?=$gerarpedido['Nome_livro'];?></td>
+
+<?php foreach ($capa as $totalcapas) ?>
+
+
+
+    <h5 >Intens do Pedido</h5>
+    <!--<th class="text-left">Livro</th>--> 
+    <tr>
+    <td><?=$gerarpedido['Nome_livro'];?></td>
+    <tr>
+    <td><img src="capas/<?= $totalcapas['nome_imagem'] ?>" alt="Destaque" class="foto" width="200 px" height="250"></td> 
     <tr>
     <th>Preço</th><td><?= number_format($gerarpedido['Preco'],2,',','.');?></td>
     <tr>
-        <hr>
-    <th>Qtd</th><td><input type='number' min="1" value="1"   required></td>
-</tr>
+    <th>Quantidade</th><td class="text-left" ><input type='number' min="1" value="1"   required></td>
+
     <td><button class="btn    btn-primary btn-sm " type="submit" name="carrinho">Continuar</button></td>
    <tr>
     

@@ -46,6 +46,16 @@ function cadastroCliente($conexao,$login,$senha){
          return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
      }
              
+     // Function call Estoque
+     function cadastrarEstoque($conexao ,$nome_livro,$qtd_livro){
+        $sql = 'INSERT INTO estoque ( Nome_livro_estoque ,Qtd_estoque)';
+        $sql .= " VALUES ('$nome_livro','$qtd_livro')";
+       //var_dump($sql);
+       
+        return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+    }
+
+
     //Function what call for insert books
     function cadastrarLivro($conexao,$nome_editora,$codigo_estoque,$nome_livro,$autor,$preco,$categoria,$registro_livro,$ano_lancamento){
         $sql ='INSERT INTO livro ( EDITORA_Cod_editora,ESTOQUE_Cod_livro, Nome_livro, Autor, Preco, Categoria, ISBN, Ano)';
@@ -71,6 +81,25 @@ function cadastroCliente($conexao,$login,$senha){
           return($resultadoEndereco);
 
     }
+
+    // Function  que faz o relatório do estoque
+    function consultaEstoque($conexao)
+    {
+        $buscarEstoque = "SELECT *  FROM estoque";
+        
+        $resultado = mysqli_query($conexao, $buscarEstoque);
+       
+        $livros = array();
+       
+        while ($livro = mysqli_fetch_assoc($resultado)) {
+            
+            $livros[] = $livro;
+        }
+    
+        return $livros;
+    }
+
+
 
 
     //FUNÇÃO DE TRATAMENTO DO ARQUIVO DO ANEXO
