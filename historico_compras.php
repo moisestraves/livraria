@@ -4,6 +4,7 @@ require 'cabecaareacliente.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
+echo "<script>alert('Compra não localizada');</script>";
 
 ?>
 
@@ -12,6 +13,7 @@ require 'adm/func_sistema.php';
 <h4>Compra não  localizada !</h4> 
 
 
+    
 <?php
 
 require 'rodape.php';

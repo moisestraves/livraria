@@ -25,11 +25,10 @@ print_r($resultado);
 
 if($resultado < 1){
 
-
-    echo "<br><h1> Relatório de Pedidos";
-    /* Aqui Foi inserido uma imagem 
-     quando não é localizado pedido para o cliente, esta imagem é carregada*/
-    echo "<h2> <b> Pedido não localizado!";
+        
+  
+    echo "<div class='alert alert-danger' role='alert'> <br> <h1 class='text-center'>Pedido Não localizado</h1>
+  </div>";
 
     
     

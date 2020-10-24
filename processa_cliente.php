@@ -47,7 +47,7 @@ if(isset($_POST['login']) && (isset($_POST['senha']))){
             
                 
             
-               // var_dump($_SESSION['Cod_cliente']);
+               // var_dump($_SESSION['Email]);
 
            // print_r($clienteCadastrado);
           
