@@ -248,9 +248,10 @@ function cadastroCliente($conexao,$login,$senha){
         
 
  }
+    //Function Call Search Termo
     function busca($conexao,$termo){
 
-        $buscalocalizada  = []; 
+        $buscalocalizada  = []; // Aqui foi Criado um Array para armazenar o resultado da busca
        
         $sql = "SELECT * FROM livro where Nome_livro LIKE '%$termo%' OR Categoria LIKE '%$termo%' OR Ano LIKE '%$termo%'";
     
@@ -258,7 +259,7 @@ function cadastroCliente($conexao,$login,$senha){
 
        while($buscar=mysqli_fetch_assoc($sqlQuery)){
 
-        array_push($buscalocalizada ,$buscar);
+        array_push($buscalocalizada ,$buscar);//Array_push Retira todos os dados de um array
 
        }
 
