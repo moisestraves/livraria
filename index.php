@@ -21,6 +21,7 @@ require 'adm/func_sistema.php';
 <?php
 
 
+
 //Aqui é selecionado todos os livros na base para Publicar na loja
 $querLivros = 'SELECT * FROM livro ORDER BY Nome_livro ';
 $resultado = mysqli_query($conexao, $querLivros);
@@ -37,15 +38,13 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 ?>
 
 <!--Corpo da Estrutura dos pagina inicial dos livros-->
-<hr>
-<h5 class="text-center text-uppercase ">Produtos</h5>
+
+<h5 class="text-center">Produtos</h5>
 
 <?php foreach ($livros as $livrobase) {
 ?>
-  <div class="container">
-    <div class="produtos">
-
-
+  <div class="d-flex flex-wrap-reverse">
+    <div class="fotos">
 
       <div class="caption text-center">
 
@@ -54,14 +53,14 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
         </p>
 
         <?php $id_livro = $livrobase['Cod_livro'];
+
         //var_dump ($id_livro);
 
         $capa = listarCapa($conexao, $id_livro);
 
 
 
-        /* AQUI ESTE PRINT ESTA TESTANDO OS DADOS DO ARRAY 
-          print_r($capa);*/
+
         ?>
 
         <!-- AQUI O FOREACH DA LEITURA DAS CAPAS DOS LIVROS-->
@@ -78,13 +77,13 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
         </p>
 
         <!-- Botão  que vai direciona para página de checkout -->
-        <p><a href="checkout.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn    btn-primary btn-sm  active   " role="button" aria-pressed="true">Comprar</a></p>
+        <p><a href="checkout.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Detalhes</a></p>
 
       </div>
 
-    <?php } ?>
-
     </div>
+  <?php } ?>
+
   </div>
   <?php
   require 'rodape.php';

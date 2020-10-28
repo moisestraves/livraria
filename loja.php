@@ -26,8 +26,8 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
 
 <?php foreach ($livros as $livrobase) {
 ?>
-  <div class="container">
-    <div class="produtos">
+  <div class="d-flex flex-wrap-reverse">
+    <div class="fotos">
 
     <div class="caption text-center">
 
@@ -63,10 +63,10 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
         <p><a href="checkout.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Comprar</a></p>
 
       </div>
-
+      
+    </div>
     <?php } ?>
 
-    </div>
   </div>
   <?php
   require 'rodape.php';

@@ -1,553 +1,571 @@
+#nav {
+  background-color: #000000;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 0px;
+  margin: 0px 0px;
+}
 
-  
-  #nav{
-     background-color:  #000000;
-     width: auto;
-     padding-left: 10px;
-     padding-right: 0px;
-   }
 
-   
-   html, body{
-    height: 100%;
-    margin: 0 auto;
-    padding: 0px;
-   }
-   body{
-    display: flex;
-    flex-direction: column;
-   }
-   .conteudo{
-     flex: 1 0 auto;
-   }
+html,
+body {
+  height: 100%;
+  margin: 25px 25px;
+  padding-top: 0px;
+}
 
-  
-   /*Formatação do Link Logo Topo*/
-   #logo-top a:hover  {
-    text-decoration: none;
-   }
-   #logo-top a{
-     text-decoration: none;
-     color: black;
-   }
-   
-  /*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
-  #logo-top  h1{
-    display: flex;
-    font-size: 15px;
-    position: relative;/*Posição do Icone*/
-    top: 15px;
-    left: 25px; /*alinhamento da margem direita*/
-    color: black;
-     
-  }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
-    /*Aqui é feita a configurações da caixa de Pesquisa do Top do Site*/
-    #caixa-top input{
-    width: 50%;
-    height: 30px;  /*Ajuste no tamanho da caixa de busca*/  
-    padding-left: 2px;
-    border: medium 3px; /* Borda da caixa de pesquisa*/
-    border-style: groove;
-    margin-left: 350px;
-    margin-right: 100px;
-    background-color: white;
-   
- }
- /* FORMATAÇÃO DO BLOCO LIVROS */    
- #livros{
+.conteudo {
+  flex: 1 0 auto;
+}
+
+
+/*Formatação do Link Logo Topo*/
+#logo-top a:hover {
+  text-decoration: none;
+}
+
+#logo-top a {
+  text-decoration: none;
+  color: black;
+}
+
+/*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
+#logo-top h1 {
+  display: flex;
+  font-size: 15px;
+  position: relative;
+  /*Posição do Icone*/
+  top: 15px;
+  left: 25px;
+  /*alinhamento da margem direita*/
+  color: black;
+
+}
+
+/*Aqui é feita a configurações da caixa de Pesquisa do Top do Site*/
+#caixa-top input {
+  width: 50%;
+  height: 30px;
+  /*Ajuste no tamanho da caixa de busca*/
+  padding-left: 2px;
+  border: medium 3px;
+  /* Borda da caixa de pesquisa*/
+  border-style: groove;
+  margin-left: 350px;
+  margin-right: 100px;
+  background-color: white;
+  justify-content: space-between;
+
+}
+
+.pesquisa button {
+  padding-left: 50px;
+}
+
+/* FORMATAÇÃO DO BLOCO LIVROS */
+#livros {
   display: inline-block;
-  display:flex;
-  margin-left: 0px ; /*formatação da margem*/
- 	padding: 20px;
-	flex-direction:row; /*DIRECIONAMENTO EM LINHA */
-	flex-wrap:nowrap; /*NÃO TEM QUEBRA DE LINHA*/
-  justify-content: center ; /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
+  display: flex;
+  margin-left: 0px;
+  /*formatação da margem*/
+  padding: 20px;
+  flex-direction: row;
+  /*DIRECIONAMENTO EM LINHA */
+  flex-wrap: nowrap;
+  /*NÃO TEM QUEBRA DE LINHA*/
+  justify-content: center;
+  /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
   text-align: center;
- }
+}
 
- /*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
- #livros img{
-		
- max-width:40%;
- background-color: white;
-  
- }
- /* FORMATAÇÃO DO PARAGRAFO DOS LIVROS PAGINA PRINCIPAL*/
- .botao-comprar p{
+/*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
+#livros img {
+
+  max-width: 40%;
+  background-color: white;
+
+}
+
+/* FORMATAÇÃO DO PARAGRAFO DOS LIVROS PAGINA PRINCIPAL*/
+.botao-comprar p {
   font-size: 10;
   height: 3px 1px;
   padding: 0;
-  
- }
- /*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
- .botao-comprar button{
+
+}
+
+/*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
+.botao-comprar button {
   border-color: #00FFFF;
   background-color: white;
   width: 200px;
-  
- }
-  /*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
-    #logo-top  h1{
 
-      font-size: 20px;
-      position: relative;/*Posição do Icone*/
-      top: 25px;
-      left: 50px; /*alinhamento da margem direita*/
-       
-    }
+}
 
-    /* LEMBRETE USAR "." para Formatar uma class do Html*/
-    .carrinho h5{
-      display: inline-block ;
-      width:95%;
-      text-decoration:none;
-      text-transform:  uppercase;
-      text-align:right;
-      background-color: white;
-      width: 100%;
-      font-size: 15px;
-  }
-    .carrinho h5{
-     padding-top:0px;
-      
-    }
-    /*FORMTAÇÃO DAS CONFIGURAÇÃO DO FOOTER É AQUI*/
-   footer {
-    position: relative;
-    
-     /*Ajuste da altura do Footer*/
-    /*padding: 20px; Ajuste da formatação do topo*/
-    color: white;
-    background-color: #1C1C1C;
-    bottom: 0px;
-    width: 100%;
-    
-    
-     }
+/*LEMBRENTE USAR "#" Para  Formatar uma ID="id" html*/
+#logo-top h1 {
 
-   footer ul {
-    
-    display: inline;
-    
-  
-    
-     font-family: 'Arial Narrow Bold', sans-serif;
-     
-   }
+  font-size: 20px;
+  position: relative;
+  /*Posição do Icone*/
+  top: 25px;
+  left: 50px;
+  /*alinhamento da margem direita*/
 
-   footer li{
-     display: inline;
-     padding:-1px;
-     margin-right: 60px;/*Espaço entre as letras do footer*/
-     margin-left: 0px;/*informações da margem*/
-     font-stretch: semi-condensed;
-    
-   }
-  
-   /*formtação e espaço dos icones do footer*/
-   .rodapeicone{
-    display: inline;
-    margin-left: 650px;
-   }
+}
 
-   footer p{
-     text-align: center;
-     font-size: small;
-     text-decoration: none;
-   }
+/* LEMBRETE USAR "." para Formatar uma class do Html*/
+.carrinho h5 {
+  display: inline-block;
+  width: 95%;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  background-color: white;
+  width: 100%;
+  font-size: 15px;
+}
+
+.carrinho h5 {
+  padding-top: 0px;
+
+}
+
+/*FORMTAÇÃO DAS CONFIGURAÇÃO DO FOOTER É AQUI*/
+footer {
+  position: relative;
+
+  /*Ajuste da altura do Footer*/
+  /*padding: 20px; Ajuste da formatação do topo*/
+  color: white;
+  background-color: #1C1C1C;
+  bottom: 0px;
+  width: 100%;
+  margin: 0px;
+
+
+}
+
+footer ul {
+
+  display: inline;
 
 
 
-    /*SEMPRE USAR PARA FIXAR RODAPÉ*/
-    .rodape {
-      flex-shrink: 0;
-    }
+  font-family: 'Arial Narrow Bold', sans-serif;
 
-    .rodape a {
+}
 
-      text-decoration: none;
-    color:white;
-   
-    }
-   #alinharCadastro{
+footer li {
+  display: inline;
+  padding: -1px;
+  margin-right: 60px;
+  /*Espaço entre as letras do footer*/
+  margin-left: 0px;
+  /*informações da margem*/
+  font-stretch: semi-condensed;
 
-    display: inline-flex;
-    padding-bottom: 50px;
-  }
-   #cliente {
-     display: block;
-     border-radius: groove 2px;
-     border-color: #1C1C1C;
-     padding-top: 0px;
-     padding-left: 0px;
-     padding-bottom: 0px;
-     background-color: white;
-     text-align: center;
-     
-    
-   }
-   /*Formatação do layout da tabela*/
-   .imprimirTabela{
-     
-     padding-left: 500px;
-     padding-top: 20px;
-     width: 90%;
-     
-   }
-   .imprimirTabela table{
-    
+}
+
+/*formtação e espaço dos icones do footer*/
+.rodapeicone {
+  display: inline;
+  align-content: space-between;
+  padding-left: 600px;
+
+
+}
+
+footer p {
+  text-align: center;
+  font-size: small;
+  text-decoration: none;
+}
+
+
+
+/*SEMPRE USAR PARA FIXAR RODAPÉ*/
+.rodape {
+  flex-shrink: 0;
+}
+
+.rodape a {
+
+  text-decoration: none;
+  color: white;
+
+}
+
+#alinharCadastro {
+
+  display: inline-flex;
+  padding-bottom: 50px;
+}
+
+#cliente {
+  display: block;
+  border-radius: groove 2px;
+  border-color: #1C1C1C;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  background-color: white;
+  text-align: center;
+
+
+}
+
+
+/*formatação da caixa de login*/
+.cliente_login {
+
+  direction: initial;
+  border-radius: solid 2px;
+  border-color: #686666;
+  padding-top: 40px;
+  padding-left: 150px;
+  padding-bottom: 250px;
+}
+
+/*Fomatação da Orientação da Label da Caixa */
+.cliente_login label {
+
+  display: inline;
+  font-size: 12px;
+  padding: 0px;
+
+
+}
+
+.cliente_login p {
+
+  display: inline;
+
+
+}
+
+.clientecadastrar {
+  direction: start;
+  border-radius: groove 2px;
+  border-color: #1C1C1C;
+  padding-top: 100px;
+  padding-left: 250px;
+  padding-bottom: 250px;
+}
+
+.clientecadastrar button {
+
+
+  background-color: black;
+  color: blanchedalmond;
+  width: 250px;
+  /*Configurando a largura do botão do login*/
+  height: 30px;
+}
+
+/*Configurações dos padrões do botão*/
+.cliente_login button {
+
+  background-color: black;
+  color: blanchedalmond;
+  width: 250px;
+  /*Configurando a largura do botão do login*/
+  height: 30px;
+
+}
+
+/*Configurando o tamanho da caixa de input*/
+.cliente_login input {
+  width: 250px;
+  display: block;
+  /*Layout em Bloco */
+}
+
+.cliente_login h6 {
+  font-size: 10px;
+  color: #008B8B;
+  padding-left: 45px;
+  height: 5px;
+}
+
+/*Formatação Pagina Administrativa e login*/
+
+.adm h1 {
+
+  text-align: center;
+
+  padding-top: 40px;
+}
+
+.adm button {
+
+  height: auto;
+  color: rgb(253, 253, 253);
+  background: black;
+
+
+
+
+}
+
+.adm input {
+  padding: 1px;
   border-radius: solid 3px;
-  border-color: black;
-  align-content:center;
-  display: table-row;
-  
-   }
+  background-color: rgb(240, 233, 233);
+  border-color: seashell;
 
-   .imprimirTabela th {
-     border-radius: 2%;
-     border:solid ;
-     padding: 0px ;
-     height: 0px;
-     background-size: 0px;
-     text-align: center;
-     font-size: 13px;
-     background-color: black;
-     color:white;
-     width: 80%;
-    
-   }
 
-   .imprimirTabela td {
-    border: solid 2px;
-    padding: 5px 2px;
-    height: 2px;
-    background-color: tomato;
-    font-size: 12;
-    font-family: Arial, Helvetica, sans-serif;
-    color:white;
-    width: 80%;
-   }
-    
-   /*formatação da caixa de login*/ 
-   .cliente_login {
+}
 
-   direction: initial;
-   border-radius: solid 2px;
-   border-color: #686666;
-   padding-top: 40px;
-   padding-left: 150px;
-   padding-bottom: 250px;
-   }
-   /*Fomatação da Orientação da Label da Caixa */
-   .cliente_login label{
+.formularioCadastro {
 
-    display: inline;
-    font-size: 12px;
-    padding: 0px;
-    
-     
-    }
-    .cliente_login p{
 
-      display: inline;
-      
-            
-      }
 
-   .clientecadastrar{
-   direction: start;
-   border-radius: groove 2px;
-   border-color: #1C1C1C;
-   padding-top: 100px;
-   padding-left: 250px;
+  padding-top: 50px;
+
+
+}
+
+/* FORMATAÇÃO CAIXA */
+.formularioCadastro input {
+
+  height: 25px;
+  width: 250px;
+}
+
+/* FORMATAÇÃO DO BOTÃO */
+.formularioCadastro button {
+  height: 30px;
+  width: 100px;
+  border-radius: solid 10px;
+  border-color: #EEE9E9;
+  background-color: black;
+  color: blanchedalmond;
+
+}
+
+
+.login_adm {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+
+.cadastro_cliente button {
+
+  background-color: black;
+  color: blanchedalmond;
+  width: 250px;
+  /*Configurando a largura do botão do login*/
+  height: 30px;
+
+
+}
+
+/*AQUI É O CORPO DE TODA CONFIGURAÇÃO RESPONSIVA DO SITE*/
+@media (max-width: 600px) {
+
+  #caixa-top input {
+    display: inline-block;
+    width: auto;
+
+  }
+
+  h1 {
+
+    width: auto;
+  }
+
+  #livros {
+    display: block;
+    display: flex;
+    margin: 0px;
+    /*formatação da margem*/
+    padding: 20px;
+    flex-direction: row;
+    /*DIRECIONAMENTO EM LINHA */
+    flex-wrap: nowrap;
+    /*NÃO TEM QUEBRA DE LINHA*/
+    justify-content: center;
+    /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
+    text-align: center;
+    font-size: small;
+    /*FORMTAÇÃO DA*/
+
+  }
+
+
+
+  /*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
+  #livros img {
+
+    width: auto;
+    background-color: white;
+
+  }
+
+  /*FORMATAÇÃO DO PARAGRAFO DOS LIVROS PAGINA PRINCIPAL*/
+  .botao-comprar p {
+    font-size: 5;
+    height: 3px;
+
+  }
+
+  /*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
+  .botao-comprar button {
+    border-color: #00FFFF;
+    background-color: white;
+    width: 100px;
+  }
+
+
+
+  .clientecadastrar {
+    direction: flex;
+    border-radius: groove 2px;
+    border-color: #1C1C1C;
+    padding-top: 100px;
+    padding-left: 250px;
     padding-bottom: 250px;
   }
 
-   .clientecadastrar button{
- 
-     
-    background-color: black;
-    color: blanchedalmond;
-    width: 250px;/*Configurando a largura do botão do login*/
-    height: 30px;
-   }
-   /*Configurações dos padrões do botão*/
-   .cliente_login button{
+  .clientecadastrar button {
+
 
     background-color: black;
     color: blanchedalmond;
-    width: 250px;/*Configurando a largura do botão do login*/
-    height: 30px;
+    width: auto;
+    /*Configurando a largura do botão do login*/
+    height: auto;
+  }
 
-   }
+  /*Configurações dos padrões do botão*/
+  .cliente_login button {
 
-   /*Configurando o tamanho da caixa de input*/
-   .cliente_login input{
-    width: 250px;
-    display: block; /*Layout em Bloco */
-   }
-
-   .cliente_login h6{
-   font-size: 10px;
-   color:#008B8B;
-   padding-left: 45px;
-   height: 5px;
-   }
-
-     /*Formatação Pagina Administrativa e login*/
-
-     .adm h1{
-       
-      text-align: center;
- 
-       padding-top: 40px;    
-    }
- 
-      .adm button {
-    
-     height: auto;
-     color: rgb(253, 253, 253);
-     background: black;
-     
-     
-    
-   
-   }
- 
-   .adm input{
-     padding: 1px ;
-     border-radius:  solid 3px;
-     background-color: rgb(240, 233, 233);
-     border-color: seashell;
-     
-        
-   }
-
-   .formularioCadastro{
-   
-    
-    
-    padding-top: 50px;
-    
-  
-   }
-   /* FORMATAÇÃO CAIXA */
-   .formularioCadastro input{
-
-    height: 25px;
-    width: 250px;
-   }
-
-   /* FORMATAÇÃO DO BOTÃO */
-   .formularioCadastro button{
-    height: 30px;
-    width: 100px;
-    border-radius: solid 10px;
-    border-color: #EEE9E9;
     background-color: black;
     color: blanchedalmond;
-  
-   }
- 
-  
-   .login_adm{
- 
-     display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 40px;   
-   }  
-   
+    width: auto;
+    /*Configurando a largura do botão do login*/
+    height: auto;
 
-   .cadastro_cliente button{
-    
-    background-color: black;
-    color: blanchedalmond;
-    width: 250px;/*Configurando a largura do botão do login*/
-    height: 30px;
+  }
+
+  /*Configurando o tamanho da caixa de input*/
+  .cliente_login input {
+    width: auto;
+    display: block;
+    /*Layout em Bloco */
 
 
-   }
 
-   /*AQUI É O CORPO DE TODA CONFIGURAÇÃO RESPONSIVA DO SITE*/
-       @media   (max-width: 600px) {
-    
-             #caixa-top input{
-              display: inline-block;      
-              width: auto;      
-     
-   }
-   
-          h1{
+  }
 
-             width: auto;
-    }
-       #livros{
-      display: block;
-      display:flex;
-      margin: 0px ; /*formatação da margem*/
-      padding: 20px;
-      flex-direction:row; /*DIRECIONAMENTO EM LINHA */
-      flex-wrap:nowrap; /*NÃO TEM QUEBRA DE LINHA*/
-      justify-content: center ; /*ALINHAMENTO DA CAIXA NO CENTRO DA PAGINA*/
-      text-align: center;
-      font-size: small; /*FORMTAÇÃO DA*/
-
-    }
-    
-    
-    
-    /*FORMATAÇÃO DO TAMANHO DAS IMAGENS*/
-    #livros img{
-        
-      width: auto;
-     background-color: white;
-      
-    }
-    /*FORMATAÇÃO DO PARAGRAFO DOS LIVROS PAGINA PRINCIPAL*/
-    .botao-comprar p{
-      font-size: 5;
-      height: 3px ;
-     
-    }
-    /*FORMATAÇÃO COR E TAMANHO DO BOTÃO*/
-    .botao-comprar button{
-      border-color: #00FFFF;
-      background-color: white;
-      width: 100px;
-    }
-      
-    
-          
-   .clientecadastrar{
-    direction: flex;
-     border-radius: groove 2px;
-     border-color: #1C1C1C;
-     padding-top: 100px;
-     padding-left: 250px;
-     padding-bottom: 250px;
-    }
-  
-    .clientecadastrar button{
-   
-       
-      background-color: black;
-      color: blanchedalmond;
-      width: auto;/*Configurando a largura do botão do login*/
-      height: auto;
-    }
-    /*Configurações dos padrões do botão*/
-    .cliente_login button{
-  
-      background-color: black;
-      color: blanchedalmond;
-      width: auto;/*Configurando a largura do botão do login*/
-      height: auto;
-  
-     }
-  
-     /*Configurando o tamanho da caixa de input*/
-     .cliente_login input{
-      width: auto;
-      display: block; /*Layout em Bloco */
-    
-  
-  
-     }
-  
-     .cliente_login h6{
+  .cliente_login h6 {
     font-size: 10px;
-    color:#008B8B;
+    color: #008B8B;
     padding-left: 45px;
     height: 5px;
-    
-  
-  
-     }
-     #alinharCadastro{
-
-      display: flex;
-      padding-bottom: auto;
-      margin: 0px;
-    }
-  
-    .cadastro_cliente button{
-      
-      background-color: black;
-      color: blanchedalmond;
-      width: auto;/*Configurando a largura do botão do login*/
-      height: auto;
-  
-  
-    }
 
 
-    .cliente_login {
 
-  direction: initial;
-   border-radius: solid 2px;
-   border-color: #686666;
-   padding-top: 40px;
-   padding-left: 150px;
-   padding-bottom: 250px;
   }
+
+  #alinharCadastro {
+
+    display: flex;
+    padding-bottom: auto;
+    margin: 0px;
+  }
+
+  .cadastro_cliente button {
+
+    background-color: black;
+    color: blanchedalmond;
+    width: auto;
+    /*Configurando a largura do botão do login*/
+    height: auto;
+
+
+  }
+
+
+  .cliente_login {
+
+    direction: initial;
+    border-radius: solid 2px;
+    border-color: #686666;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-bottom: 250px;
+  }
+
   /*Fomatação da Orientação da Label da Caixa */
-  .cliente_login label{
+  .cliente_login label {
 
     display: inline;
     font-size: 12px;
     padding: 0px;
-    
-     
-    }
-    .cliente_login p{
 
-      display: inline;
-           
-       
-      }
 
-       /*formatação da caixa de login*/ 
-   .cliente_login {
+  }
+
+  .cliente_login p {
+
+    display: inline;
+
+
+  }
+
+  /*formatação da caixa de login*/
+  .cliente_login {
 
     direction: flex;
-     border-radius: solid 2px;
-     border-color: #686666;
-     padding-top: 40px;
-     padding-left: 150px;
-     padding-bottom: 250px;
-    }
+    border-radius: solid 2px;
+    border-color: #686666;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-bottom: 250px;
+  }
 
-    #nav{
-      background-color:  #000000;
-      width: auto;
-    }
+  #nav {
+    background-color: #000000;
+    width: auto;
+    margin-left: 25PX;
+  }
 
-   }
-
-   .conteudocategoria{
-    padding-top: 20px;
-    background-color: rgba(255, 255, 255, 0.849);
-    text-align: center;
-    text-transform: uppercase;
- 
-
-   }
-
-  #categoriAdm  {
-    display: flex;
-    padding: 40px;
-    background-color: #F8F8FF ;  
-    text-transform: uppercase; 
 }
 
-#categoriAdm  p{
+.conteudocategoria {
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.849);
+  text-align: center;
   text-transform: uppercase;
- padding: -0px;
- font-size: 15px;
- color: forestgreen;
+
+
 }
+
+#categoriAdm {
+  display: flex;
+  padding: 40px;
+  background-color: #F8F8FF;
+  text-transform: uppercase;
+}
+
+#categoriAdm p {
+  text-transform: uppercase;
+  padding: -0px;
+  font-size: 15px;
+  color: forestgreen;
+}
+
 #categoriAdm img {
   border-radius: solid 50px;
   border-color: black;
@@ -555,11 +573,13 @@
   width: 250px;
   height: 300px;
 }
-#conteudoInfo{
+
+#conteudoInfo {
   display: flex;
   padding: 40px;
-  background-color:#F8F8FF
+  background-color: #F8F8FF
 }
+
 #conteudoInfo img {
   border-radius: solid 20px;
   border-color: black;
@@ -569,44 +589,69 @@
 }
 
 #conteudoInfo p {
- text-transform: uppercase;
- padding: -0px;
- font-size: 15px;
- color: forestgreen;
+  text-transform: uppercase;
+  padding: -0px;
+  font-size: 15px;
+  color: forestgreen;
 
 }
 
 /*Formatação geral das Caixa dos produtos*/
-.produtos{
+.flex-container {
 
-  background-color: #FFFFFF;
   display: flex;
-  padding-top: 20px 0px;
-  border-radius: black 2px;
-  
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  /* AQUI FAZ A QUEBRA DE LINHA*/
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 
 }
-.produtos h5{
+
+.flex-container img {
+
+  padding: 3px;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+}
+.produtos {
+ /* flex: 0 1 auto;*/
+
+  background-color: u, #FFFFFF;
+  padding-top: 0px 0px;
+  border-radius: black 2px;
+
+
+}
+
+.produtos h5 {
 
   font-size: 16px;
-  width: 120; 
-  height: 60px;;
+  width: 120;
+  height: 60px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 10px 5px;
- 
- 
-}
-.produtos a {
-
-  padding-left: 150px;
-
- text-align: center;
-
-}
-
-
-.produtos img{
   padding: 10px;
-  width:150px;
-  height: 200px;
+
+
+}
+
+
+
+.produtos img {
+  padding: 3px;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.fotos img{
+
+  border-radius: 5px;  
+  padding: 5px;
+  width: 150px;
+  height: 125;
+  border-color: darkgray;
 }

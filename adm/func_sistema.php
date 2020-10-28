@@ -248,8 +248,26 @@ function cadastroCliente($conexao,$login,$senha){
         
 
  }
+    function busca($conexao,$termo){
+
+        $buscalocalizada  = []; 
+       
+        $sql = "SELECT * FROM livro where Nome_livro LIKE '%$termo%' OR Categoria LIKE '%$termo%' OR Ano LIKE '%$termo%'";
+    
+        $sqlQuery =mysqli_query($conexao,$sql);
+
+       while($buscar=mysqli_fetch_assoc($sqlQuery)){
+
+        array_push($buscalocalizada ,$buscar);
+
+       }
+
+       return $buscalocalizada ;
+
+    }
     
 
+    
 
     ?>
 
