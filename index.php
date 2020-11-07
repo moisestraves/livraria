@@ -23,7 +23,7 @@ require 'adm/func_sistema.php';
 
 
 //Aqui é selecionado todos os livros na base para Publicar na loja
-$querLivros = 'SELECT * FROM livro ORDER BY Nome_livro ';
+$querLivros = 'SELECT * FROM livro ORDER BY Nome ';
 $resultado = mysqli_query($conexao, $querLivros);
 
 
@@ -49,7 +49,7 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
       <div class="caption text-center">
 
         <p>
-          <h5><?php echo $livrobase['Nome_livro']; ?></h5>
+          <h5><?php echo $livrobase['Nome']; ?></h5>
         </p>
 
         <?php $id_livro = $livrobase['Cod_livro'];
@@ -77,7 +77,7 @@ while ($livro = mysqli_fetch_assoc($resultado)) {
         </p>
 
         <!-- Botão  que vai direciona para página de checkout -->
-        <p><a href="checkout.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Detalhes</a></p>
+        <p><a href="detalhes.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Detalhes</a></p>
 
       </div>
 

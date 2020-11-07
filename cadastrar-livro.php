@@ -18,86 +18,67 @@ require 'adm/conexao.php';
     <article>
 
 
-<div class="formularioCadastro">
-    
-<div class="row">
+        <div class="formularioCadastro">
 
-<form method="POST" action="processa-cadastro-livro.php">
+            <div class="row">
 
-    <!-- Aqui foi inserido um select , para buscas os nomes das editoras no banco-->  
- <p>
-<select class="form-control form-control-sm" name="select_editora">
-<option>Escolha o Nome da Editora   </option> 
-    <?php
-       $sqleditora = "SELECT Cod_editora , Nome_editora  FROM editora";
-       $queryeditora = mysqli_query($conexao,$sqleditora);
-   
-       print_r($queryeditora);
-      //$editora = array();
-   
-       while($editoras = mysqli_fetch_assoc($queryeditora)){?>
+                <form method="POST" id="inserir-capa" action="processa-cadastro-livro.php " enctype="multipart/form-data">
 
-        <option value="<?php echo $editoras['Cod_editora'];?>"> <?php echo $editoras['Nome_editora'];?> 
-        </option><?php
+                    <!-- Aqui foi inserido um select , para buscas os nomes das editoras no banco-->
+                    <p>
+                        <label>Editora</label>
+                        <input type='text' class="form-control form-control-sm" name="editora" placeholder="Nome da Editora" required>
 
-       }
-       ?>
-  
-</select>
-<p><select class="form-control form-control-sm" name="select_estoque">
-<option>Codigo  Estoque  </option> 
-    <?php
-       $sqlestoque = "SELECT * FROM estoque";
-       $queryestoque = mysqli_query($conexao,$sqlestoque);
-   
-       print_r($queryestoque);
-      //$editora = array();
-   
-       while($estoque = mysqli_fetch_assoc($queryestoque)){?>
+                    </p>
 
-        <option value="<?php echo $estoque['Cod_livro'];?>"> <?php echo $estoque['Cod_livro'];?> 
-        </option></p><?php
-    
-       }
-       ?>
-  
-</select>
-<p><abel>Nome do Livro</label>
-<input type="text"  class="form-control form-control-sm" name="nomelivro" placeholder="Livro" required></p>
-    
-
-<p><label>Autor</label>
-<input type="text"  class="form-control form-control-sm"  name="nomeautor" placeholder="Exemplo Jose da Silva" required >
-</p>
+                    <p>
+                        <label>Titulo</label>
+                        <input type="text" class="form-control form-control-sm" name="nomelivro" placeholder="Nome do Livro" required>
+                    </p>
 
 
-<p><label>Preço Unitário</label>
-<input type="text"  class="form-control form-control-sm"  name="preco" placeholder="22.00" required >
-</p>
+                    <p><label>Autor</label>
+                        <input type="text" class="form-control form-control-sm" name="nomeautor" placeholder="Exemplo Jose da Silva" required>
+                    </p>
 
 
-<p><label>Cadegoria</label>
-<input type="text"  class="form-control form-control-sm"  name="categoria" placeholder="Administração" required >
-</p>
-   
-    
-<p><label>ISBN</label>
-<input type="text"  class="form-control form-control-sm"  name="isbn" placeholder="002423" required >
-</p>
-    
-    
+                    <p><label>Preço Unitário</label>
+                        <input type="text" class="form-control form-control-sm" name="preco" placeholder="22.00" required>
+                    </p>
 
-<p><label>Ano</label>
-<input type="text"  class="form-control form-control-sm"  name="ano" placeholder="Ano de Lançamento" required >
-</p>
- 
-<p><button type="submit" name="cadastrar">Salvar</button></p>
-</form>
+
+                    <p><label>Categoria</label>
+                        <input type="text" class="form-control form-control-sm" name="categoria" placeholder="Administração" required>
+                    </p>
+
+
+                    <p><label>ISBN</label>
+                        <input type="text" class="form-control form-control-sm" name="isbn" placeholder="002423" required>
+                    </p>
+
+
+
+                    <p><label>Ano</label>
+                        <input type="text" class="form-control form-control-sm" name="ano" placeholder="Ano de Lançamento" required>
+                    </p>
+
+                    <p><label>Detalhes</label>
+                        <input type="text" class="form-control form-control-sm" name="detalhes" placeholder="Detalhes sobre o livro" required>
+                    </p>
+
+
+                    <label for="imagem">Inserir Capa</label>
+                    </p>
+                    <p><input required type="file" id="arquivo" name="arquivo" accept="image/png, image/jpeg, image/gif">
+
+
+                        <p>
+                            <p><button type="submit" name="cadastrar">Salvar</button></p>
+                </form>
+            </div>
+        </div>
 </div>
 </div>
-</div>
-</div>
-
 
 <?php
 

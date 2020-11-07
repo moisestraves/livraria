@@ -69,7 +69,7 @@ var_dump($resultado);*/
 
                     <p>
                         <abel>Nome do Livro</label>
-                            <input type="text" class="form-control form-control-sm" name="nomelivro" value="<?php echo $resultado['Nome_livro']; ?>">
+                            <input type="text" class="form-control form-control-sm" name="nomelivro" value="<?php echo $resultado['Nome']; ?>">
                     </p>
 
 
@@ -79,7 +79,7 @@ var_dump($resultado);*/
 
 
                     <p><label>Preço Unitário</label>
-                        <input type="text" class="form-control form-control-sm" name="preco" value="<?php echo $resultado['Preco']; ?>">
+                        <input type="text" class="form-control form-control-sm" name="preco" value="<?php echo number_format($resultado['Preco'],2,',','.'); ?>">
                     </p>
 
 

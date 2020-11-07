@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require 'cabecaareacliente.php';
+require 'cabecaarea-admin.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 

@@ -19,8 +19,8 @@ if (!$_SESSION['Email']) {
 
 
     <div class="table-responsive">
-        <table class="table bordered table-hover table-sm table-dark">
-            <thead class="thead-light ">
+        <table class="table text-center">
+            <thead class="thead-light border ">
                 <tr>
 
                     <th scope="col">Nome</th>

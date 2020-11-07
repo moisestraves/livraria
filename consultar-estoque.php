@@ -19,9 +19,9 @@ if (!$_SESSION['Email']) {
 <div class="container">
 
 
-    <h4 class="text-info mx-auto" style="width: 400px;">Usuários Cadastrados no Sistema </h4>
+    <h4 class="text-info text-center" >Relatório Estoque </h4>
     <div class="table-responsive">
-        <table class="table bordered table-hover table-sm table-dark">
+        <table class="table bordered text-center">
             <thead class="thead-light ">
                 <tr>
 

@@ -49,23 +49,33 @@ body {
 
 /*Aqui é feita a configurações da caixa de Pesquisa do Top do Site*/
 #caixa-top input {
-  width: 50%;
+  width: 70%;
   height: 30px;
   /*Ajuste no tamanho da caixa de busca*/
-  padding-left: 2px;
+  padding-left: 10px;
   border: medium 3px;
   /* Borda da caixa de pesquisa*/
   border-style: groove;
-  margin-left: 350px;
-  margin-right: 100px;
+  margin-left: 20px;
   background-color: white;
-  justify-content: space-between;
+  text-align: justify;
+ 
 
 }
 
-.pesquisa button {
-  padding-left: 50px;
+.top_busca{
+margin-left: 300px;
+margin-right: 300px;
 }
+
+.top_busca button{
+
+  /*background-color: cadetblue;*/
+border-collapse: 1vw;
+white-space: normal;
+height: 4vh;
+}
+
 
 /* FORMATAÇÃO DO BLOCO LIVROS */
 #livros {

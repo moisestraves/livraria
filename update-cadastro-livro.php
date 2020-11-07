@@ -17,7 +17,7 @@ session_start();
   // var_dump($id_livro);
 
     
-    $selecionardados = "UPDATE  livro  SET Nome_livro ='$nome', Autor='$autor' where Cod_livro ='$id_livro'"; // select *from config
+    $selecionardados = "UPDATE  livro  SET Nome_livro ='$nome', Autor='$autor', Preco='$preco', Categoria='$categoria', Ano='$anopubli' where Cod_livro ='$id_livro'"; // select *from config
     $resultado = mysqli_query($conexao, $selecionardados);
 
 

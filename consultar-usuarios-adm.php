@@ -58,8 +58,8 @@ if (!$_SESSION['Email']) {
                     <td><?= $userSistema['Email']; ?></td>
                     <td><?= $userSistema['Ativo']; ?></td>
 
-                    <td> <a href="editar-user-geral.php?id=<?= $userSistema['Cod_usuario']; ?>"> Editar </td>
-                    <td> <a href="#"> Excluir
+                    <td> <a href="editar-perfil-usuario.php?id=<?= $userSistema['Cod_usuario']; ?>"> Editar </td>
+                    <td> <a href="delete-user-adm.php?id=<?= $userSistema['Cod_usuario']; ?>"> Excluir
                             <!--<img src="IMG/lapis.png" width="5%">--></a> </td>
                 </tr>
             <?php

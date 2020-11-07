@@ -102,7 +102,7 @@ if(isset($_POST['atualizar'])){
           
         echo 'Atualizado com Sucesso  ';
 
-        echo '<a href="perfil-usuario.php"><h4> PAINEL DO USUÁRIO<h4></a>';
+        echo '<a href="painel-adm.php"><h4> PAINEL DO USUÁRIO<h4></a>';
           
           
        

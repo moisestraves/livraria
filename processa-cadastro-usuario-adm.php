@@ -17,37 +17,41 @@ $ativo= $_POST['ativo'];
 //var_dump($conexao);
 
 // AQUI O SISTEMA FAZ A CHAMADA DA FUNCTION INSERT DE CADASTRO DE USUÁRIO
-$restuladoInsertUsuario=cadastrousuario($conexao,$nome,$cargo,$perfil,$departamento,$email,$senha,$ativo);
+
+$verificar_login = "SELECT Email FROM  usuario where Email ='$email'";
+$teste_Sql = mysqli_query($conexao,$verificar_login);
+
+
+$resultado = $teste_Sql;
+
+
+print_r($resultado);
+
+if($resultado == 1){
+
+    echo "Usuário já Cadastrador";
+
+}elseif($resultado != 1){
+
+    echo"Pode Cadastrar";
+}
+
+
+}
+
+
+//$restuladoInsertUsuario=cadastrousuario($conexao,$nome,$cargo,$perfil,$departamento,$email,$senha,$ativo);
 
 //var_dump($restuladoInsertUsuario);
 
 
-  
-if($restuladoInsertUsuario== 1){
-
-    echo "<div class='alert alert-success' role='alert'>
-    <h5 class='text-center'>Usuário Cadastrado com Sucesso !</h5>";
-   
-   
-}else {
-
-    echo "<div class='alert alert-danger' role='alert'>
-    <h5 class='text-center'><br><br>NÃO FOI POSSIVEL CADASTRAR O USUÁRIO <br> <br>ENTRE EM CONTATO COM O ADMINISTRADOR DO SISTEMA !</h5>";
-   
-    
-    
-
-    
-}
-
-}
 
 
 
 
 require 'rodape.php';
 
- 
+ ?>
 
 
 
