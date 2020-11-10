@@ -6,11 +6,12 @@ require 'adm/conexao.php';
 
 function ValidarUsuarioCadastro($conexao,$login){
 
-    $sql_login ="SELECT  FROM cliente Where Email='$login' LIMIT 1";
+    $sql_login ="SELECT Email FROM cliente Where Email='$login' ";
     $resul_login = mysqli_query($conexao,$sql_login);
 
-    return mysqli_fetch_assoc($resul_login);
-
+    $resultado = mysqli_num_rows($resul_login);
+   
+    return $resultado;
 }
 
 
@@ -21,13 +22,7 @@ function cadastroCliente($conexao, $login, $senha)
     $sqlCadCliente = 'INSERT INTO cliente (Cod_cliente, Nome, Email, Senha, Tel, Endereco, Bairro, Numero, Complemento, Cep, Estado, Cidade, Tipo_Pessoa)';
     $sqlCadCliente .= "VALUES ('NULL', '', '$login', '$md', '', '', '', '0', '', '', '', '', '')";
 
-    if (mysqli_query($conexao, $sqlCadCliente)) {
-
-        echo "Cadastro realizado com sucesso!";
-    } else {
-
-        echo "Cliente já Cadastrado";
-    }
+    return mysqli_query($conexao, $sqlCadCliente) or die(mysqli_error($conexao));
 }
 
 //Function insert new user sistem
