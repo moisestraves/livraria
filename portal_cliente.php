@@ -9,7 +9,7 @@ if (isset($_SESSION['Email'])) {
 
     //print_r($clienteCadastrado);
 
-    header('location:portal_cliente.php');
+    header('location:cliente_login.php.php');
 }
 
 

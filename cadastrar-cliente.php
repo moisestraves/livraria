@@ -47,9 +47,10 @@ if (isset($_POST['cadastrar'])) {
 
         cadastroCliente($conexao, $login, $senha);
         
-        echo"<div class='alert alert-success' role='alert'>Cadastro Efetuado com Sucesso ! </div><br> <a href='portal_cliente.php'>Logar</a>";
-        
+        header('location:sucesso.php');
+         
     }
+   
 }
 
 require 'rodape.php';
