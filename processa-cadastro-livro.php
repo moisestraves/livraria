@@ -17,7 +17,19 @@ if (isset($_POST['cadastrar']) && (isset($_FILES['arquivo']))) {
     $detalhes_resumo = $_POST['detalhes'];
     $arquivo['nome'] = $_FILES['arquivo']['name']; //Aqui estou pegando o nome do arquivo Carregado
 
+    //CORRIGIR A VALIDAÇÃO PARA INSERIR USUÁRIO NO SISTEMA OS DADOS TEM QUE
 
+    if(strlen($ano_lancamento > 4 )){
+         $_SESSION['msg'] = "Dados Invalido";
+
+        die;
+        if(strlen($detalhes >255)){
+
+            echo"Tamanho do Campo maior que o Permitido o tamano maximo é de 255 caracteres";
+        }die;
+
+         
+    }
     //Aqui usei um array para pegar o indice do arquivo VERIFICAR DESTINO PASTA
     $upload =  array();
 
@@ -46,11 +58,9 @@ if (isset($_POST['cadastrar']) && (isset($_FILES['arquivo']))) {
 
     if ($cad_livro == 1) {
 
-
-        echo "<div class='alert alert-success' role='alert'>
-    <h5 class='text-center'>Livro Cadastrado com Sucesso !</h5>";
-        header('location: consulta-cadastro-livros.php');
-        die();
+        header('location:inserircapa.php');
+       
+        
     } else {
 
         echo "Erro";

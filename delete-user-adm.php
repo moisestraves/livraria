@@ -20,7 +20,7 @@ if($removerUsuarioAdm != 1){
     echo "Usuário Removido com Sucesso !";
 }
 
-
-require 'require.php';
+header('location:consultar-usuarios-adm.php');
+require 'rodape.php';
 
 // Verifica se Esta recebendo o ID 

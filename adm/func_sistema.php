@@ -15,6 +15,18 @@ function ValidarUsuarioCadastro($conexao,$login){
 }
 
 
+function ValidarUsuarioCadastroAdm($conexao,$login){
+
+    $sql_login ="SELECT Email FROM usuario Where Email='$login' ";
+    $resul_login = mysqli_query($conexao,$sql_login);
+
+    $resultado = mysqli_num_rows($resul_login);
+   
+    return $resultado;
+}
+
+
+
 //Funçtion  new customer registration
 function cadastroCliente($conexao, $login, $senha)
 {
@@ -22,6 +34,7 @@ function cadastroCliente($conexao, $login, $senha)
     $sqlCadCliente = 'INSERT INTO cliente (Cod_cliente, Nome, Email, Senha, Tel, Endereco, Bairro, Numero, Complemento, Cep, Estado, Cidade, Tipo_Pessoa)';
     $sqlCadCliente .= "VALUES ('NULL', '', '$login', '$md', '', '', '', '0', '', '', '', '', '')";
 
+    
     return mysqli_query($conexao, $sqlCadCliente) or die(mysqli_error($conexao));
 }
 
@@ -66,6 +79,9 @@ function cadastrarLivro($conexao, $nome_editora, $nome_livro, $autor, $preco, $c
 
     return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
+
+
+
 
 //Function Search Address Client
 function enderecoEntrega($conexao, $id){

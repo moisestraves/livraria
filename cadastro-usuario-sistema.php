@@ -63,3 +63,4 @@ require 'adm/conexao.php';
 <?php
 
 require 'rodape.php';
+?>

@@ -15,6 +15,7 @@ require 'adm/func_sistema.php';
         <p>Faça o seu Cadastro</p>
         <p>
             <input type="e-mail" name="login" required placeholder="email"></p>
+
         <p><input type="password" name="senha" required placeholder="senha"></p>
         <button name="cadastrar" type="submit">Cadastrar</button>
     </form>
@@ -26,54 +27,32 @@ require 'adm/func_sistema.php';
 
 if (isset($_POST['cadastrar'])) {
 
-    $cliente = $_POST['login'];
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+   
+    //Aqui faço a verificação do usuário no sistema
+    $resultado = ValidarUsuarioCadastro($conexao, $login);
 
-    $usuario = ValidarUsuarioCadastro($conexao, $cliente);
-
-    if ($usuario >= 1) {
-
-        echo "<div class='alert alert-danger' role='alert'>
-    <h5>E-mail já Cadastrado no Sistema!</h5>";
-    //var_dump($usuario);
-    
-        die;
-    }
-    
-
-    // var_dump($usuario);
-    $senhaCliente = $_POST['senha'];
+    if ($resultado != 0) {
 
 
+        echo "<div class='alert alert-danger' role='alert'>Este e-mail já esta em uso </div>";
 
-    //Aqui faço a verificação do tamanho da senha Requisito para ser aceito é 8 caracteres
-    $senha = strlen($senhaCliente);
+        
+    }elseif//Aqui estou verificando a quantidade de caracteres da senha
+    ((strlen($senha) < 8) OR (strlen($senha) >8)){
 
-    if ($senha > 8) {
+        echo "<div class='alert alert-danger' role='alert'>A senha informada não atende os requisitos do sistema <br> A sua senha deve conter 8 caracteres !";
+    } else {
 
-        echo "<div class='alert alert-danger' role='alert'>
-        Senha Maior que a Parmitida pelo Sistema  !<br> O tamanho máximo é de 8 Caracteres";
-        die;
-    }
-
-
-    //  var_dump($cliente);
-    //var_dump($senhaCliente);
-
-    $resultado = cadastroCliente($conexao, $cliente, $senhaCliente);
-
-    if ($resultado > 0) {
-
-        echo "<div class='alert alert-success' role='alert'>
-        <h5 class='text-center'>Cadastro Efetuado com Sucesso <a href='cliente-login.php'>Clique Para Acessar !</a></h5>";
+        cadastroCliente($conexao, $login, $senha);
+        
+        echo"<div class='alert alert-success' role='alert'>Cadastro Efetuado com Sucesso ! </div><br> <a href='portal_cliente.php'>Logar</a>";
         
     }
 }
 
-?>
-<?php
-
-
-
 require 'rodape.php';
+
 
 ?>
