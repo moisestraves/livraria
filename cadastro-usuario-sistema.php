@@ -53,7 +53,7 @@ require 'adm/conexao.php';
 <p>
 
 </p>
-<button type="submit" name="cadastrar">Salvar</button>
+<button type="submit" name="cadastrar">Cadastrar</button>
 </form>
 
 </div>

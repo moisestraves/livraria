@@ -5,7 +5,7 @@ require 'adm/func_sistema.php';
 
 
 //Aqui foi Recebido o codigo do livro, que sera usado para escolher a capa do livro
-$id_livro = $_POST['select_capa'];
+$id_livro = $_POST['46'];
 
 //print_r($id_livro);
 
@@ -37,8 +37,9 @@ if(isset($_FILES['arquivo'])){
 
 
             //Aqui sql  que  vai inserir os dados da capa e o livro no banco
-             $sql = "INSERT INTO capa_livro (LIVRO_Cod_livro,nome_imagem, `Data_cadastro`) VALUES ('$id_livro','$novoNomeDoArquivo',NOW())";
-             $queryCap = mysqli_query($conexao,$sql);   
+             $sql = "UPDATE livro SET imagem ='$novoNomeDoArquivo' where ='$id_livro'";
+            
+            if(mysqli_query($conexao,$sql));   //If verifica execução da query
 
 
             echo "Arquivo carredo com Sucesso <a href='carregar-capa.php'><br>Clique para Cadastra nova capa</a>";

@@ -34,7 +34,7 @@ var_dump($resultado);*/
 <div class="container">
 
 <div class="formularioCadastro">
-<form  method="post" action="">
+<form  method="POST" action="update-usuario.php">
 
 <h6>Meu Perfil </h6>
 <p>
@@ -62,11 +62,12 @@ var_dump($resultado);*/
 <p><label>Login</label>
     <input type="text" class="form-control" name="email"  value="<?php echo $resultado['Email'];?> "></p>
 
-<!--<p><label>Status</label>
-    <input  type="text" class="form-control" name="ativo"  value="<?php echo $resultado['Ativo'];?>"></p>-->
+<p><label>Ativo</label>
+    <input  type="text" class="form-control" name="ativo"  value="<?php echo $resultado['Ativo'];?>"></p>
 
     <!-- Botão que faz o Envio das Informações!-->
-<p> <button type="submit" name="atualizar">Salvar </button></p>
+<p> <button type="submit" name="atualizar">Atualizar</button>
+<a class="btn btn-dark  btn-sm" href="painel-adm.php" role="button">voltar</a>
 
 </form>
 </div>
@@ -74,47 +75,6 @@ var_dump($resultado);*/
 </div>
 
 <?php
-
-if(isset($_POST['atualizar'])){
-
-//AQUI A ID FOI RECEBIDA VIA POST,O SISTEMA PRECISA DELA PARA FAZER O UPDADE CORREDO DO USUÁRIO
-//var_dump($id_cliente = $_POST['id']) ;
-   // echo "Botão Update Acionado ";
-    $id_cliente = $_POST['id'];
-    $Nome = $_POST['nome']; 
-    $cargo =$_POST['cargo'];
-    $departamento =$_POST['departamento'];
-    $email =$_POST['email'];
-
-    // QUERY UPDATE EXECUTANDO
-
-      $updateUsuario= "UPDATE usuario SET Nome='$Nome' , Cargo='$cargo', Departamento='$departamento', Email='$email'  where Cod_usuario ='$id_cliente'";
-      $sqlquery = mysqli_query($conexao,$updateUsuario);
-      
-      //$resultado = mysqli_fetch_assoc($updateCliente);
-      
-      $resultado = $sqlquery;
-      
-      //var_dump($conexao);
-      
-      if($resultado ==1){
-      
-          
-        echo 'Atualizado com Sucesso  ';
-
-        echo '<a href="painel-adm.php"><h4> PAINEL DO USUÁRIO<h4></a>';
-          
-          
-       
-      }else {
-      
-          echo 'Não Foi Possivel finalizar a operação ';
-      }
-      
-
-  
-}
-
 
 
 

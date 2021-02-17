@@ -22,9 +22,9 @@ require 'adm/conexao.php';
 
             <div class="row">
 
-                <form method="POST" id="inserir-capa" action="processa-cadastro-livro.php " enctype="multipart/form-data">
+                <form method="POST" id="inserir-capa" action="processa-cadastro-livro.php">
 
-                    <!-- Aqui foi inserido um select , para buscas os nomes das editoras no banco-->
+
                     <p>
                         <label>Editora</label>
                         <input type='text' class="form-control form-control-sm" name="editora" placeholder="Nome da Editora" required>
@@ -67,19 +67,16 @@ require 'adm/conexao.php';
                     </p>
 
 
-                    <label for="imagem">Inserir Capa</label>
-                    </p>
-                    <p><input required type="file" id="arquivo" name="arquivo" accept="image/png, image/jpeg, image/gif">
-
-
-                        <p>
-                            <p><button type="submit" name="cadastrar">Salvar</button></p>
+                    <p>
+                    <p><button name="cadastrar">Salvar</button></p>
                 </form>
             </div>
         </div>
 </div>
 </div>
 
+
 <?php
 
 require 'rodape.php';
+?>

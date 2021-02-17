@@ -11,7 +11,7 @@ $id_livro = $_GET['id'];
 // Chamada da função que lista os livros Aqui ela vai mostrar o livro selecionado para compra    
 $capa = listarCapa($conexao, $id_livro);
 
-$compra = "SELECT * from  livro where  Cod_livro =('$id_livro')";
+$compra = "SELECT * from  livro where  Cod_livro = ('$id_livro')";
 
 $queryCompra = mysqli_query($conexao, $compra);
 
@@ -39,27 +39,25 @@ if ($_SESSION['Email']) {
 
 ?>
     <div class="container">
-        
+
         <form action="carrinho.php" method="POST">
             <table class="table border">
 
                 <?php foreach ($capa as $totalcapas) ?>
-
                 <h5 class="text-center">Detalhes do Produto</h5>
+                <tr class="border ">
+                    <th>Titulo</th>
+                    <td class=" border"><?= $gerarpedido['Nome']; ?></td>
+                </tr>
+               <tr>
+                <td class=" border"><img src="capas/<?= $totalcapas['imagem'] ?>" alt="Foto do Produto" class="foto" width="200 px" height="250"></td>
+               </tr>
 
-                <!--<th class="text-left">Livro</th>-->
-                <tr class=" border ">
-                    <td class=" border"><?= $gerarpedido['Nome_livro']; ?></td>
-                <tr>
-                    <td class=" border"><img src="capas/<?= $totalcapas['nome_imagem'] ?>" alt="Destaque" class="foto" width="200 px" height="250"></td>
-
-                <tr>
-                    <th>Detalhes</th>
-                    <td class=" border"><?= $gerarpedido['Detalhes']; ?></td>
-                <tr>
-                <tr>
-                    <th>Preço</th>
-                    <td class=" border"><?= number_format($gerarpedido['Preco'], 2, ',', '.'); ?></td>
+                    <th>Resumo</th>
+                    <td class=" border"><?= $gerarpedido['Resumo']; ?></td>
+                </tr>
+                <th>Preço</th>
+                <td class=" border"><?= number_format($gerarpedido['Preco'], 2, ',', '.'); ?></td>
 
 
                 <tr>
@@ -72,7 +70,7 @@ if ($_SESSION['Email']) {
                 <tr>
 
             </table>
-
+            
         <?php } ?>
         </form>
     </div>

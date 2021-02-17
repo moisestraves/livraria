@@ -71,15 +71,26 @@ function cadastrarEstoque($conexao, $nome_livro, $qtd_livro)
 }
 
 
-//Function what call for insert books
-function cadastrarLivro($conexao, $nome_editora, $nome_livro, $autor, $preco, $categoria, $registro_livro, $ano_lancamento,$detalhes_resumo,$upload){
+//Function what call for insert books e retorna a última id inserida
+function cadastrarLivro($conexao, $nome_editora, $nome_livro, $autor, $preco, $categoria, $registro_livro, $ano_lancamento,$detalhes_resumo){
 
-    $sql = 'INSERT INTO livro (Editora, Nome, Autor, Preco, Categoria, ISBN, Ano ,Resumo,Imagem)';
-    $sql .= " VALUES ( '$nome_editora', '$nome_livro', '$autor', '$preco', '$categoria', '$registro_livro', '$ano_lancamento','$detalhes_resumo','$upload')";
+    $sql = 'INSERT INTO livro (Editora, Nome, Autor, Preco, Categoria, ISBN, Ano ,Resumo)';
+    $sql .= " VALUES ( '$nome_editora', '$nome_livro', '$autor', '$preco', '$categoria', '$registro_livro', '$ano_lancamento','$detalhes_resumo')";
 
-    return mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+    //
+    if (mysqli_query($conexao, $sql)){
+        
+        $last_id = mysqli_insert_id($conexao);
+
+        echo "Ultima ide Inserida ".$last_id;
+     } else {
+
+            echo "Falha no cadastro do livro".$sql;
+        }
+    
+    
+    
 }
-
 
 
 

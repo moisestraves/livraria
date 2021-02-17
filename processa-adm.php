@@ -18,7 +18,7 @@ if(isset($_POST['login']) && (isset($_POST['senha']))){
 
 
         
-        $loginSql = "SELECT * FROM usuario WHERE Email =('$loginUsuario') AND ('$senhaUsuario')";
+        $loginSql = "SELECT * FROM usuario WHERE Email =('$loginUsuario') AND = ('$senhaUsuario')";
         $queryLogin = mysqli_query($conexao,$loginSql);
 
         //Criado o Array

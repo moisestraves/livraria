@@ -34,7 +34,7 @@ if (!$_SESSION['Email']) {
 
 
       // AQUI O SELECT SELECIONA O CODIGO DO LIVRO MAIS O NOME
-       $sql = "SELECT Cod_livro ,Nome_livro FROM livro";
+       $sql = "SELECT Cod_livro , Nome FROM livro";
        $querySql = mysqli_query($conexao,$sql);
    
        //print_r($queryestoque);
@@ -42,7 +42,7 @@ if (!$_SESSION['Email']) {
         //Aqui 
        while($estoque = mysqli_fetch_assoc($querySql)){?>
 
-        <option value="<?php echo $estoque['Cod_livro'];?>"> <?php echo $estoque['Nome_livro'];?> 
+        <option value="<?php echo $estoque['Cod_livro'];?>"> <?php echo $estoque['Nome'];?> 
         </option></p><?php
     
        }

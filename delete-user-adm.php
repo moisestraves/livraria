@@ -12,15 +12,15 @@ $id_usuario = $_GET['id']; // <-- Recebendo a ide para executar a remoção
 $removerUsuarioAdm = deletarUsuarioAdm($conexao,$id_usuario);
 
 
-if($removerUsuarioAdm != 1){
-
-    echo "Erro";
-}else{
+if($removerUsuarioAdm == 1){
 
     echo "Usuário Removido com Sucesso !";
+
+}else{
+
+   echo"ERRO";
 }
-
 header('location:consultar-usuarios-adm.php');
-require 'rodape.php';
-
 // Verifica se Esta recebendo o ID 
+require 'rodape.php';
+?>

@@ -16,75 +16,54 @@ require 'adm/func_sistema.php';
     </div>
   </div>
 </div>
+<div class="container theme-showcase " role="main">
+  <?php
+  //Aqui é selecionado todos os livros na base para Publicar na loja
+  $querLivros = 'SELECT * FROM livro ORDER BY Nome ';
+  $resultadoLivros = mysqli_query($conexao, $querLivros);
+  $livrosCatalogo = mysqli_fetch_assoc($resultadoLivros);
+  ?>
+  <!--Corpo da Estrutura dos pagina inicial dos livros-->
 
+  <h5 class="text-center">Produtos</h5>
+  <!--Laço de controle while livros-->
+  <div class="row">
+    <?php while ($livrobase = mysqli_fetch_assoc($resultadoLivros)) { ?>
+      <!-- Aqui a tag faz Deslogamento em linha-->
 
-<?php
-
-
-
-//Aqui é selecionado todos os livros na base para Publicar na loja
-$querLivros = 'SELECT * FROM livro ORDER BY Nome ';
-$resultado = mysqli_query($conexao, $querLivros);
-
-
-$livros = array();
-
-while ($livro = mysqli_fetch_assoc($resultado)) {
-
-  $livros[] = $livro;
-}
-
-
-?>
-
-<!--Corpo da Estrutura dos pagina inicial dos livros-->
-
-<h5 class="text-center">Produtos</h5>
-
-<?php foreach ($livros as $livrobase) {
-?>
-  <div class="d-flex flex-wrap-reverse">
-    <div class="fotos">
-
-      <div class="caption text-center">
-
-        <p>
+      <div class="col-sm-6 col-md-3">
+        <div class="caption text-center">
+          <p>
           <h5><?php echo $livrobase['Nome']; ?></h5>
-        </p>
+          </p>
 
-        <?php $id_livro = $livrobase['Cod_livro'];
-
-        //var_dump ($id_livro);
-
-        $capa = listarCapa($conexao, $id_livro);
-
-
-
-
-        ?>
-
-        <!-- AQUI O FOREACH DA LEITURA DAS CAPAS DOS LIVROS-->
-        <?php foreach ($capa as $totalcapas) ?>
-
-        <img src="capas/<?= $totalcapas['nome_imagem'] ?>" alt="Destaque" class="foto">
-
-        <!--FORMATAÇÃO EM MOEDA -->
-
-        <h6><?php echo 'Código -', $livrobase['Cod_livro']; ?></h6>
-        </p>
-        <p>
-          <h5><?php echo 'R$ ', number_format($livrobase['Preco'], 2, ',', '.'); ?></h5>
-        </p>
-
-        <!-- Botão  que vai direciona para página de checkout -->
-        <p><a href="detalhes.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Detalhes</a></p>
-
+          <?php $id_livro = $livrobase['Cod_livro'];
+          $capa = listarCapa($conexao, $id_livro);
+          ?>
+          <!-- AQUI O FOREACH DA LEITURA DAS CAPAS DOS LIVROS-->
+          <?php foreach ($capa as $totalcapas) ?>
+          <img src="capas/<?= $totalcapas['imagem'] ?>" alt="Destaque" class="foto">
+          <!--FORMATAÇÃO EM MOEDA -->
+          <h6><?php echo 'Cod-Livro ', $livrobase['Cod_livro']; ?>
+            </p>
+            <p>
+            <h5><?php echo 'R$ ', number_format($livrobase['Preco'], 2, ',', '.'); ?></h5>
+          </h6>
+          </p>
+          <!-- Botão  que vai direciona para página de checkout -->
+          <div><a href="detalhes.php?id=<?= $livrobase['Cod_livro']; ?>" class="btn  text-justify-center  btn-primary btn-sm  active   " role="button" aria-pressed="true">Detalhes</a></div>
+        
+        </div>
       </div>
+     
 
-    </div>
-  <?php } ?>
 
+     
+    <?php } ?>
+    
   </div>
+
+
   <?php
   require 'rodape.php';
   ?>

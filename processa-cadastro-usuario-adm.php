@@ -14,7 +14,6 @@ $email = $_POST['email'];
 $senha  = $_POST['senha'];
 $ativo= $_POST['ativo'];
 
-//var_dump($conexao);
 
 // AQUI O SISTEMA FAZ A CHAMADA DA FUNCTION INSERT DE CADASTRO DE USUÁRIO
 
@@ -25,32 +24,26 @@ if ($verificaUsuario >= 1) {
 
     echo "<div class='alert alert-danger' role='alert'>
 <h5>E-mail Já Cadastrado!</h5>";
-
- die;
-    
+ exit;
 }
+    
 
 //print_r($resultado);
-}
 
 $resultadoInsertUsuario=cadastrousuario($conexao,$nome,$cargo,$perfil,$departamento,$email,$senha,$ativo);
 
 if($resultadoInsertUsuario ==1){
 
-    
-    echo "<div class='alert alert-sucess' role='alert'>
-<h5>Usuário Cadastradro com sucesso !</h5>";
+   // header('location:consultar-usuarios-adm.php');
+
+     
+   echo "<div class='alert alert-sucess' role='alert'>
+   <h5>Usuário Cadastradro com sucesso !</h5>";
+  
 
 }
-
-
-
-
-
-
-
-
- ?>
+}
+?>
 
 
 <?php

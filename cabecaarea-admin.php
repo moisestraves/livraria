@@ -15,25 +15,17 @@
 </head>
 
 <!--DiviGeral Corpo-->
-<header class="top_busca">
-<div id="caixa-top">
-        <!-- LEMBRAR DE VALIDAR AQUI OS CAMPOS PARA BUSCA-->
-        <form action="search.php" method="GET">
-        <input type="search" name='q' id="q" placeholder="Buscar por , Nome,Preco,Autor,Categorias" > 
-        <button type="submit">Busca</button>
-       </form>
-      </div>
 
-</header>
 <main class="conteudo">
 
   <body>
     <div id='principal'>
       <div id="logo-top">
-        <h1><a href="index.php"> On Livraria Brasil</a></h1>
+        <h1><a href="painel-adm.php"> On Livraria Brasil</a></h1>
 
       </div>
 
+     
       <!--Configurações e  Opçãoes do Carrinho de Compras-->
       <div class="carrinho">
         <h5>Loja Carrinho <svg width="1em" height="2em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

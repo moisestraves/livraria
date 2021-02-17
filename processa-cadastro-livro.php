@@ -3,10 +3,11 @@ require 'cabecaarea-admin.php';
 require 'adm/conexao.php';
 require 'adm/func_sistema.php';
 
-///AQUI ESTOU RECEBENDO A CAPA DO LIVRO
 
-if (isset($_POST['cadastrar']) && (isset($_FILES['arquivo']))) {
-    // print_r($_FILES);
+
+
+if (isset($_POST['cadastrar'])) {
+
     $nome_editora = $_POST['editora'];
     $nome_livro = $_POST['nomelivro'];
     $autor = $_POST['nomeautor'];
@@ -15,58 +16,49 @@ if (isset($_POST['cadastrar']) && (isset($_FILES['arquivo']))) {
     $registro_livro = $_POST['isbn'];
     $ano_lancamento = $_POST['ano'];
     $detalhes_resumo = $_POST['detalhes'];
-    $arquivo['nome'] = $_FILES['arquivo']['name']; //Aqui estou pegando o nome do arquivo Carregado
-
-    //CORRIGIR A VALIDAÇÃO PARA INSERIR USUÁRIO NO SISTEMA OS DADOS TEM QUE
-
-    if(strlen($ano_lancamento > 4 )){
-         $_SESSION['msg'] = "Dados Invalido";
-
-        die;
-        if(strlen($detalhes >255)){
-
-            echo"Tamanho do Campo maior que o Permitido o tamano maximo é de 255 caracteres";
-        }die;
-
-         
-    }
-    //Aqui usei um array para pegar o indice do arquivo VERIFICAR DESTINO PASTA
-    $upload =  array();
-
-    foreach ($arquivo as $foto) {
-
-        $upload = $foto;
-    }
-
-    print_r($upload);
-
-    echo "Livro $nome_livro <br>";
-    echo "Autor $autor <br>";
-    echo "Preço $preco <br>";
-    echo "Categoria $categoria <br>";
-    echo "ISBN: $registro_livro <br>";
-    echo "Ano de Lançamento $ano_lancamento <br>";
-    echo "Foto' $upload";
-
-    //print_r($_POST);
-    //print_r($_FILES);
 
 
 
-    $cad_livro = cadastrarLivro($conexao, $nome_editora, $nome_livro, $autor, $preco, $categoria, $registro_livro, $ano_lancamento, $detalhes_resumo, $upload);
+
+$cad_livro = cadastrarLivro($conexao, $nome_editora, $nome_livro, $autor, $preco, $categoria, $registro_livro, $ano_lancamento, $detalhes_resumo);
 
 
-    if ($cad_livro == 1) {
-
-        header('location:inserircapa.php');
-       
-        
-    } else {
-
-        echo "Erro";
+$registro = $cad_livro;
 
 
 
-        header('location:painel-adm.php');
-    }
+//print_r($registro);
+
+
+
+//print_r($_POST);
+//print_r($_FILES);
+
 }
+
+
+?>
+<!-- AQUI FOI INSERIDO O UPLOAD DA FOTO PARA SALVAR O NOME PRECISA CORRIGIR PARA FUNCIONAR NÃO ESTA PEGANDO O ID-->
+
+<h5 class="text-left">Inserir capa do livro</h5>
+
+<!-- Inicio do formulário  para inserir a capa do livro-->
+<form action="#" method="POST" id="inserir-capa" name="form-inserir-capa" enctype="multipart/form-data">
+
+<!-- Select para inserir os dados do livro-->
+
+<label for ="imagem">Selecionar uma capa para este livro:</label></p>
+    <p><input required type="file" id="arquivo" name="arquivo" accept="image/png, image/jpeg, image/gif">
+</p>
+
+<input class="btn-block bg-dark text-white" type="submit" value="Inserir">
+<hr>
+
+
+
+
+</form>
+
+
+
+ 
